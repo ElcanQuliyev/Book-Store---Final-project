@@ -194,7 +194,7 @@ img {
 }
 
 h2 {
-    margin: 5px;
+    margin: 10px;
     font-size: 20px;
 }
 
@@ -216,7 +216,7 @@ h2 {
 
 #next {
     position: absolute;
-    right: -55px;
+    right: -50px;
 }
 
 #prev:hover {
@@ -285,6 +285,7 @@ h3,
     object-fit: cover;
     /* Şəkillərin deformasiya olmamasını təmin edir */
     border-radius: 5px;
+    cursor: pointer;
 }
 
 h3 {
@@ -310,4 +311,71 @@ button {
 
 button:hover {
     color: #FFA500;
+}
+
+
+/* Banner-area */
+
+.main-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.small-banner {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    width: 500px;
+    cursor: pointer;
+}
+
+/* Author-area */
+
+.author-area {
+    margin-top: 40px;
+}
+
+.author-content {
+    display: flex;
+    gap: 40px;
+}
+
+
+.left-content img {
+    width: 270px;
+    height: 370px;
+}
+
+.right-content p {
+    color: black;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.store-logo{
+    margin-top: 40px;
+}
+
+.store-content{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.store-content img{
+    width: 400px;
+    height: 370px;
+}
+
+.store-content p{
+    color: black;
+    font-size: 30px;
+    letter-spacing: 4px;
 }
