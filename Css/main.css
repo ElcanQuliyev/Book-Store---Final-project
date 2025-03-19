@@ -65,6 +65,10 @@ p {
     color: #FFA500;
 }
 
+#cart-count {
+    font-size: 18px;
+}
+
 /* Slideshow */
 
 .mySlides {
@@ -76,7 +80,7 @@ img {
     border-radius: 12px;
 }
 
-.home-content{
+.home-content {
     padding-top: 30px;
 }
 
@@ -115,6 +119,7 @@ img {
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+    color: white;
 }
 
 /* Caption text */
@@ -178,4 +183,131 @@ img {
     .text {
         font-size: 11px
     }
+}
+
+/* books */
+.container {
+    max-width: 900px;
+    position: relative;
+    margin: auto;
+    margin-top: 40px;
+}
+
+h2 {
+    margin: 5px;
+    font-size: 20px;
+}
+
+#prev,
+#next {
+    color: black;
+    width: 30px;
+    height: 100px;
+    border-radius: 12px;
+    background-color: #6D4C41;
+    top: 35%;
+    z-index: 3;
+}
+
+#prev {
+    position: absolute;
+    left: -50px;
+}
+
+#next {
+    position: absolute;
+    right: -55px;
+}
+
+#prev:hover {
+    background-color: #FFA500;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#next:hover {
+    background-color: #FFA500;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#books-container {
+    max-height: 1000px;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.book {
+    width: 160px;
+    /* Eyni genişlik */
+    height: 300px;
+    /* Eyni hündürlük */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* Elementlər arasında düzgün məsafə saxlayır */
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.book span {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.book p {
+    margin-bottom: 8px;
+}
+
+h3,
+.book p,
+.book span {
+    display: block;
+    text-align: center;
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.book img {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    /* Şəkillərin deformasiya olmamasını təmin edir */
+    border-radius: 5px;
+}
+
+h3 {
+    font-size: 12px;
+}
+
+.book p {
+    font-size: 12px;
+}
+
+span {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: gray;
+}
+
+button:hover {
+    color: #FFA500;
 }

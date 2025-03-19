@@ -1,3 +1,8 @@
+const cartCount = document.getElementById("cart-count");
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
+let cart = [];
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -24,3 +29,65 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+
+async function fetchBooks() {
+    const url = `https://www.googleapis.com/books/v1/volumes?q=javascript&key=${API_KEY}`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        displayBooks(data.items); // Kitabları HTML-ə göndər
+    } catch (error) {
+        console.error("Xəta baş verdi:", error);
+    }
+}
+
+// Kitabları HTML-ə əlavə edən funksiya
+function displayBooks(books) {
+    const container = document.getElementById("books-container");
+    container.innerHTML = "";
+
+    books.forEach(book => {
+        const bookInfo = book.volumeInfo;
+        const title = bookInfo.title || "Başlıq yoxdur";
+        const authors = bookInfo.authors ? bookInfo.authors.join(", ") : "Müəllif yoxdur";
+        const price = book.saleInfo?.retailPrice?.amount ? `${book.saleInfo.retailPrice.amount} AZN` : "Satışda yoxdur";
+        const thumbnail = bookInfo.imageLinks?.thumbnail || "https://via.placeholder.com/128x192"; // Əgər şəkil yoxdursa, default şəkil qoy
+
+        // Yeni kitab elementi yaradılır
+        const bookElement = document.createElement("div");
+        bookElement.classList.add("book"); // Stil üçün class əlavə et
+        bookElement.innerHTML = `
+            <img src="${thumbnail}" alt="${title}">
+            <h3>${title}</h3>
+            <p><strong>Müəllif:</strong> ${authors}</p>
+            <span>${price} AZN</span>
+            <button onclick="addToCart(${thumbnail}, '${title}', ${price})">Səbətə əlavə et <i class="fa-solid fa-basket-shopping"></i></button>
+        `;
+
+        container.appendChild(bookElement); // HTML-ə əlavə et
+    });
+
+
+
+    window.addToCart = (thumbnail, title, price) => {
+        cart.push({ thumbnail, title, price });
+        cartCount.textContent = cart.length;
+        localStorage.setItem("cart", JSON.stringify(cart));
+    };
+
+    nextButton.addEventListener("click", () => {
+        container.style.scrollBehavior = "smooth";
+        container.scrollLeft += 1000;
+    });
+    
+    prevButton.addEventListener("click", () => {
+        container.style.scrollBehavior = "smooth";
+        container.scrollLeft -= 1000;
+    });
+}
+
+// Sayt açılan kimi kitabları yüklə
+fetchBooks();
+
