@@ -35,9 +35,13 @@ async function fetchBooks() {
     const url = `https://www.googleapis.com/books/v1/volumes?q=javascript&key=${API_KEY}`;
 
     try {
+        nextButton.style.display = "none";
+        prevButton.style.display = "none";
         const response = await fetch(url);
         const data = await response.json();
         displayBooks(data.items); // Kitabları HTML-ə göndər
+        nextButton.style.display = "block";
+        prevButton.style.display = "block";
     } catch (error) {
         console.error("Xəta baş verdi:", error);
     }
@@ -77,11 +81,16 @@ function displayBooks(books) {
         localStorage.setItem("cart", JSON.stringify(cart));
     };
 
+    container.addEventListener("wheel", (evt) => {
+        evt.preventDefault();
+        container.scrollLeft += evt.deltaY;
+    })
+
     nextButton.addEventListener("click", () => {
         container.style.scrollBehavior = "smooth";
         container.scrollLeft += 1000;
     });
-    
+
     prevButton.addEventListener("click", () => {
         container.style.scrollBehavior = "smooth";
         container.scrollLeft -= 1000;
