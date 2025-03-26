@@ -1,7 +1,8 @@
 const cartCount = document.getElementById("cart-count");
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+cartCount.textContent = cart.length;
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -67,19 +68,11 @@ function displayBooks(books) {
             <h3>${title}</h3>
             <p><strong>Müəllif:</strong> ${authors}</p>
             <span>${price} AZN</span>
-            <button onclick="addToCart(${thumbnail}, '${title}', ${price})">Səbətə əlavə et <i class="fa-solid fa-basket-shopping"></i></button>
+            <button onclick="addToCart('${thumbnail}', '${title}', '${price ? price.replace(' AZN', '') : '0'}')">Səbətə əlavə et <i class="fa-solid fa-basket-shopping"></i></button>
         `;
 
         container.appendChild(bookElement); // HTML-ə əlavə et
     });
-
-
-
-    window.addToCart = (thumbnail, title, price) => {
-        cart.push({ thumbnail, title, price });
-        cartCount.textContent = cart.length;
-        localStorage.setItem("cart", JSON.stringify(cart));
-    };
 
     container.addEventListener("wheel", (evt) => {
         evt.preventDefault();
@@ -96,6 +89,14 @@ function displayBooks(books) {
         container.scrollLeft -= 1000;
     });
 }
+
+window.addToCart = (thumbnail, title, price) => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || []; // Ən son səbəti götür
+    cart.push({ thumbnail, title, price });
+    localStorage.setItem("cart", JSON.stringify(cart)); // LocalStorage-a yaz
+    cartCount.textContent = cart.length; // Sayğacı yenilə
+};
+
 
 // Sayt açılan kimi kitabları yüklə
 fetchBooks();

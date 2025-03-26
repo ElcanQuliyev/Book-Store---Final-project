@@ -3,3 +3,74 @@ body {
     margin: 0px;
     box-sizing: border-box;
 }
+
+header {
+    background-color: #6D4C41;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.personal-area {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+input {
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+}
+
+.logo {
+    width: 200px;
+    height: 70px;
+}
+
+.user {
+    width: 25px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: gray;
+}
+
+.user-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+p {
+    margin: 0px;
+    color: gray;
+}
+
+.header-bottom {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.header-bottom a {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.header-bottom a:hover {
+    color: #FFA500;
+}
+
+#cart-count {
+    font-size: 18px;
+}

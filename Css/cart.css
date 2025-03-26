@@ -1,0 +1,162 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #6D4C41;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 400px;
+}
+
+.logo {
+    width: 200px;
+    height: 70px;
+}
+
+.user {
+    width: 25px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: gray;
+}
+
+.user-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-area p {
+    margin: 5px 0 0 0;
+    color: gray;
+}
+
+.content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.container{
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: #FFA500;
+    font-size: 50px;
+    margin: 30px;
+}
+
+.cart-item{
+    margin-top: 50px;
+}
+
+.cart-item img {
+    width: 150px;
+    height: 200px;
+}
+
+.cart-item p {
+    font-size: 20px;
+    color: black;
+    margin: 10px 0px 10px 0px;
+}
+
+button {
+    background-color: #6D4C41;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.cart-item button:hover {
+    background-color: #FFA500;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#clear-cart:hover {
+    background-color: #FFA500;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.store-logo {
+    margin-top: 50px;
+}
+
+.store-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.store-content img {
+    width: 400px;
+    height: 370px;
+}
+
+.store-content p {
+    color: black;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.contact {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 70px 0px 20px;
+}
+
+.contact a {
+    font-size: 18px;
+    color: black;
+}
+
+.contact a:hover {
+    color: #FFA500;
+}
+
+h4 {
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.about p {
+    font-size: 18px;
+    color: black;
+}
+
+footer {
+    background-color: #2A2A2A;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+footer p {
+    text-align: center;
+    color: gray;
+}
