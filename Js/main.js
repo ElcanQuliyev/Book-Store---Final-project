@@ -74,11 +74,6 @@ function displayBooks(books) {
         container.appendChild(bookElement); // HTML-ə əlavə et
     });
 
-    container.addEventListener("wheel", (evt) => {
-        evt.preventDefault();
-        container.scrollLeft += evt.deltaY;
-    })
-
     nextButton.addEventListener("click", () => {
         container.style.scrollBehavior = "smooth";
         container.scrollLeft += 1000;

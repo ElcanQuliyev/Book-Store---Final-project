@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book-Store</title>
-    <link rel="stylesheet" href="Css/main.css">
+    <link rel="stylesheet" href="Css/yeniler.css">
     <link rel="stylesheet" href="Css/common.css">
     <link rel="shortcut icon" href="images/1600w-deIvdmK9R7E.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,29 +26,30 @@
         </nav>
     </header>
     <div class="header-bottom">
-        <a href="yeniler.html" class="header-link">Yeniler</a>
+        <a href="#" class="header-link">Yeniler</a>
         <a href="#" class="header-link">Müəlliflər</a>
         <a href="#" class="header-link">Haqqımızda</a>
     </div>
+
 
     <div class="home-content">
         <!-- Slideshow container -->
         <div class="slideshow-container">
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-                <img src="images/2186018_babil-slider-sehadet-web_210016.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="images/2167214_babil-slider-gurbilek-web_468947.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
                 <img src="images/2172747_babil-slider-da-vinci-web_422242.png" style="width:100%">
             </div>
 
             <div class="mySlides fade">
                 <img src="images/2167222_babil-slider-bauman-web_230590.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/2186018_babil-slider-sehadet-web_210016.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/2167214_babil-slider-gurbilek-web_468947.png" style="width:100%">
             </div>
 
             <!-- Next and previous buttons -->
@@ -68,19 +68,6 @@
     </div>
 
 
-    <!-- Modal Pəncərəsi -->
-    <!-- <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <img id="modalImg" src="" alt="Məhsul şəkli">
-            <h3 id="modalTitle"></h3>
-            <p id="modalAuthor"></p>
-            <button id="goToCart">Səbətə Get</button>
-            <button id="continueShopping">Alış-verişə Davam Et</button>
-        </div>
-    </div> -->
-
-
     <div class="container">
         <div id="books-container">
             <!-- random data -->
@@ -90,51 +77,8 @@
         <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
     </div>
 
-    <div class="main-content">
-        <div class="small-banner">
-            <div class="banner">
-                <img src="images/2184537_babil-banner-metafizik-web_224500.png" alt="">
-            </div>
-            <div class="banner">
-                <img src="images/2183793_babil-banner-web-kazancakis_147759.png" alt="">
-            </div>
-            <div class="banner">
-                <img src="images/2183780_babil-banner-web-aytmatov_172101.png" alt="">
-            </div>
-            <div class="banner">
-                <img src="images/2183777_babil-banner-web-israil_301014.png" alt="">
-            </div>
-        </div>
 
-        <div class="author-area">
-            <h2>Ayın Müəllifi</h2>
-            <div class="author-content">
-                <div class="left-content">
-                    <img src="images/img-gabrielgarciamarquez_173722615869.png" alt="">
-                </div>
-                <div class="right-content">
-                    <p>“Gabo” yahut “Gabito” olarak da bilinen Nobel Ödüllü Kolombiyalı yazar Gabriel García Márquez,
-                        büyülü
-                        gerçekçilik denen üslup tarzının önde gelen temsilcilerinden biridir. Yalnızca Latin Amerika
-                        edebiyatının değil, dünya edebiyatının da en meşhur isimlerinden Márquez’in eserleri onlarca
-                        dile
-                        çevrildi ve dünyanın pek çok yerinden milyonlarca okura ulaştı. 17 Nisan 2014’te akciğer
-                        iltihabı
-                        nedeniyle Mexico City’de hayatını kaybeden yazar, ardında onlarca ölümsüz hikâye ve roman
-                        bıraktı.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="store-logo">
-            <h2>Store Logo</h2>
-            <div class="store-content">
-                <img src="images/985e2607-f76e-4776-b48e-59199693085d.png" alt="">
-                <p>RİMBERİO BOOK STORE</p>
-            </div>
-        </div>
-
+    <div class="content">
         <div class="contact">
             <div class="social-media">
                 <h4>Sosial Media</h4>
@@ -151,8 +95,8 @@
                 <p>WhatsApp -la əlaqə saxlaya bilərsiz</p>
             </div>
         </div>
-
     </div>
+
 
     <footer>
         <div class="footer-about">
@@ -160,11 +104,19 @@
         </div>
     </footer>
 
-    <script src="Js/modal.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetchBooks();
+        });
+    </script>
+
+
     <script src="Js/config.js"></script>
     <script src="Js/main.js"></script>
-
+    <script src="Js/modal.js"></script>
     <script src="https://kit.fontawesome.com/7972087a8c.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
