@@ -42,6 +42,28 @@ a {
     color: gray;
 }
 
+
+.header-bottom {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.header-bottom a {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.header-bottom a:hover {
+    color: #FFA500;
+}
+
+#cart-count {
+    font-size: 18px;
+}
+
 .content {
     max-width: 1000px;
     margin: auto;
