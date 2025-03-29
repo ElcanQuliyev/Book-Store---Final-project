@@ -74,3 +74,76 @@ p {
 #cart-count {
     font-size: 18px;
 }
+
+.store-logo {
+    margin-top: 40px;
+}
+
+.store-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.store-content img {
+    width: 400px;
+    height: 370px;
+}
+
+.store-content p {
+    color: black;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.contact {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 70px 0px 20px;
+}
+
+.contact a {
+    font-size: 18px;
+    color: black;
+}
+
+.contact a:hover {
+    color: #FFA500;
+}
+
+h4 {
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.about p {
+    font-size: 18px;
+    color: black;
+}
+
+footer {
+    background-color: #2A2A2A;
+    margin-top: 40px;
+    padding: 30px;
+}
+
+.footer-about {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-about p {
+    font-size: 18px;
+    text-align: center;
+}

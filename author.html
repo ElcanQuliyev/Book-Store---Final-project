@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html lang="az">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book-Store</title>
-    <link rel="stylesheet" href="Css/cart.css">
+    <link rel="stylesheet" href="Css/author.css">
+    <link rel="stylesheet" href="Css/common.css">
     <link rel="shortcut icon" href="images/1600w-deIvdmK9R7E.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
     <header>
         <nav>
             <a href="main.html"><img src="images/download.png" alt="" class="logo"></a>
-            <div class="user-area">
-                <img src="images/user-solid.svg" alt="" class="user">
-                <p>giriş et</p>
+            <input type="text" id="search" placeholder="Məhsul axtar..." size="70">
+            <div class="personal-area">
+                <a href="cart.html" id="cart">🛒 Səbət (<span id="cart-count">0</span>)</a>
+                <div class="user-area">
+                    <img src="images/user-solid.svg" alt="" class="user">
+                    <p>giriş et</p>
+                </div>
             </div>
         </nav>
     </header>
@@ -26,24 +32,40 @@
         <a href="haqqımızda.html" class="header-link">Haqqımızda</a>
     </div>
 
+    <div class="main-content">
+        <img src="images/0464184_290422_Babil-WebSlider-BabilTalks-3_197544.png" alt="">
 
-    <div class="content">
-        <div id="cart-items" class="container">
-            <h1>Sizin səbətiniz</h2>
-                <div id="cart-list"></div>
-                <h3>Ümumi məbləğ: <span id="total-price">0</span> AZN</h3>
-                <button id="clear-cart">Səbəti Təmizlə</button>
+        <div class="cards">
+            <div class="card">
+                <a href="#"><img src="images/2030286_63346_250118.png" alt=""></a>
+                <p>Filistin Meselesinin Dünü ve Bugünü Hakkında</p>
+            </div>
+
+            <div class="card">
+                <a href="#"><img src="images/0465573_180522_Babil-BabilTalksCovers-UygarMitat_200561.png" alt=""></a>
+                <p>Hücrelerden Yıldızlara</p>
+            </div>
+
+            <div class="card">
+                <a href="#"><img src="images/0464277_0604522_Babil-BabilTalksCovers-BurakBilgehan_165653.png"
+                        alt=""></a>
+                <p>Varoluşla Temas Okumaları</p>
+            </div>
+
+            <div class="card">
+                <a href="#"><img src="images/0464627_090522_Babil-BabilTalksCovers-UmurTalu_158621.png" alt=""></a>
+                <p>Kitaplara Yolculuğum</p>
+            </div>
         </div>
 
 
-
         <div class="store-logo">
+            <h2>Store Logo</h2>
             <div class="store-content">
                 <img src="images/985e2607-f76e-4776-b48e-59199693085d.png" alt="">
                 <p>RİMBERİO BOOK STORE</p>
             </div>
         </div>
-
 
         <div class="contact">
             <div class="social-media">
@@ -61,14 +83,16 @@
                 <p>WhatsApp -la əlaqə saxlaya bilərsiz</p>
             </div>
         </div>
+
     </div>
 
     <footer>
-        <p>© 2025 Mini Mağaza. Bütün hüquqlar qorunur.</p>
+        <div class="footer-about">
+            <p>© 2025 Mini Mağaza. Bütün hüquqlar qorunur.</p>
+        </div>
     </footer>
 
     <script src="https://kit.fontawesome.com/7972087a8c.js" crossorigin="anonymous"></script>
-    <script src="Js/cart.js"></script>
 </body>
 
 </html>
