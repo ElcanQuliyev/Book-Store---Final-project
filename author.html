@@ -22,6 +22,13 @@
                 <div class="user-area">
                     <img src="images/user-solid.svg" alt="" class="user">
                     <p>giriş et</p>
+
+                    <div class="hidden-box">
+                        <div class="account">
+                            <a href="login.html" id="login">Qeydiyyat</a>
+                            <a href="#" id="logout">Çıxış</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -37,24 +44,33 @@
 
         <div class="cards">
             <div class="card">
-                <a href="#"><img src="images/2030286_63346_250118.png" alt=""></a>
+                <img src="images/2030286_63346_250118.png" alt="">
                 <p>Filistin Meselesinin Dünü ve Bugünü Hakkında</p>
             </div>
 
             <div class="card">
-                <a href="#"><img src="images/0465573_180522_Babil-BabilTalksCovers-UygarMitat_200561.png" alt=""></a>
+                <img src="images/0465573_180522_Babil-BabilTalksCovers-UygarMitat_200561.png" alt="">
                 <p>Hücrelerden Yıldızlara</p>
             </div>
 
             <div class="card">
-                <a href="#"><img src="images/0464277_0604522_Babil-BabilTalksCovers-BurakBilgehan_165653.png"
-                        alt=""></a>
+                <img src="images/0464277_0604522_Babil-BabilTalksCovers-BurakBilgehan_165653.png" alt="">
                 <p>Varoluşla Temas Okumaları</p>
             </div>
 
             <div class="card">
-                <a href="#"><img src="images/0464627_090522_Babil-BabilTalksCovers-UmurTalu_158621.png" alt=""></a>
+                <img src="images/0464627_090522_Babil-BabilTalksCovers-UmurTalu_158621.png" alt="">
                 <p>Kitaplara Yolculuğum</p>
+            </div>
+
+            <div class="card">
+                <img src="images/0468526_100622_Babil-BabilTalksCovers-MesutVarlik_132983.png" alt="">
+                <p>Bir “Sakat” Liste</p>
+            </div>
+
+            <div class="card">
+                <img src="images/0465988_250522_Babil-BabilTalksCovers-GulgunTurkogluPagy_155590.png" alt="">
+                <p>Farklı Dünyalara Yolculuk</p>
             </div>
         </div>
 
@@ -91,6 +107,13 @@
             <p>© 2025 Mini Mağaza. Bütün hüquqlar qorunur.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById("logout").addEventListener("click", () => {
+            localStorage.removeItem("loggedIn");
+            window.location.href = "login.html";
+        });
+    </script>
 
     <script src="https://kit.fontawesome.com/7972087a8c.js" crossorigin="anonymous"></script>
 </body>

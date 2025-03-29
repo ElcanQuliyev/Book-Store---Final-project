@@ -35,6 +35,7 @@ a {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    position: relative;
 }
 
 .user-area p {
@@ -64,12 +65,60 @@ a {
     font-size: 18px;
 }
 
+
+.hidden-box {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 115%;
+    left: -40%;
+    transform: translateX(-50%);
+    background: white;
+    border: 2px solid gray;
+    padding: 10px 20px;
+    border-radius: 8px;
+    z-index: 10;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.user-area:hover .hidden-box,
+.hidden-box:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+#login {
+    border: 1px solid #FFA500;
+    padding: 4px 8px;
+    background-color: #FFA500;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#login:hover {
+    color: white;
+}
+
+#logout {
+    border: 1px solid #6D4C41;
+    padding: 4px 8px;
+    background-color: #6D4C41;
+    border-radius: 8px;
+    color: white;
+}
+
+#logout:hover {
+    background-color: #a3705e;
+    border: 1px solid #a3705e;
+}
+
 .content {
     max-width: 1000px;
     margin: auto;
 }
 
-.container{
+.container {
     margin-top: 50px;
 }
 
@@ -80,7 +129,7 @@ h1 {
     margin: 30px;
 }
 
-.cart-item{
+.cart-item {
     margin-top: 50px;
 }
 
@@ -113,69 +162,6 @@ button {
 #clear-cart:hover {
     background-color: #FFA500;
     transition: background-color 0.3s ease-in-out;
-}
-
-.store-logo {
-    margin-top: 50px;
-}
-
-.store-content {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-.store-content img {
-    width: 400px;
-    height: 370px;
-}
-
-.store-content p {
-    color: black;
-    font-size: 30px;
-    letter-spacing: 4px;
-}
-
-.contact {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 70px 0px 20px;
-}
-
-.contact a {
-    font-size: 18px;
-    color: black;
-}
-
-.contact a:hover {
-    color: #FFA500;
-}
-
-h4 {
-    margin: 10px 0 10px 0;
-    font-size: 20px;
-}
-
-.social-media {
-    display: flex;
-    flex-direction: column;
-}
-
-.about {
-    display: flex;
-    flex-direction: column;
-}
-
-.about p {
-    font-size: 18px;
-    color: black;
-}
-
-footer {
-    background-color: #2A2A2A;
-    margin-top: 50px;
-    padding: 30px;
 }
 
 footer p {

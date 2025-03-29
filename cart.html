@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="az">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book-Store</title>
     <link rel="stylesheet" href="Css/cart.css">
+    <link rel="stylesheet" href="Css/common.css">
     <link rel="shortcut icon" href="images/1600w-deIvdmK9R7E.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -17,6 +18,13 @@
             <div class="user-area">
                 <img src="images/user-solid.svg" alt="" class="user">
                 <p>giriş et</p>
+
+                <div class="hidden-box">
+                    <div class="account">
+                        <a href="login.html" id="login">Qeydiyyat</a>
+                        <a href="#" id="logout">Çıxış</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -66,6 +74,13 @@
     <footer>
         <p>© 2025 Mini Mağaza. Bütün hüquqlar qorunur.</p>
     </footer>
+
+    <script>
+        document.getElementById("logout").addEventListener("click", () => {
+            localStorage.removeItem("loggedIn");
+            window.location.href = "login.html";
+        });
+    </script>
 
     <script src="https://kit.fontawesome.com/7972087a8c.js" crossorigin="anonymous"></script>
     <script src="Js/cart.js"></script>
