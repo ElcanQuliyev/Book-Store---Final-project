@@ -265,3 +265,201 @@ button:hover {
     font-size: 20px;
     letter-spacing: 2px;
 }
+
+/* --- Responsivlik --- */
+
+/* 📌 Tablet Ekranlar (1024px və daha kiçik) */
+@media screen and (max-width: 1100px) {
+    nav {
+        display: flex !important;
+        gap: 20px !important;
+        padding: 0 16px;
+    }
+
+    .header-bottom {
+        flex-direction: column;
+        gap: 20px !important;
+        margin-bottom: 30px;
+    }
+
+    .home-content {
+        padding: 0 16px;
+    }
+
+    .container {
+        padding: 0 16px;    
+    }
+
+    .store-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .store-content img {
+        width: 80%;
+        height: auto;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .contact a {
+        font-size: 16px;
+    }
+
+    .small-banner {
+        display: flex;
+        flex-direction: column;
+        gap: 20px !important;
+        width: 100%;
+    }
+
+    .small-banner img {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 0 16px;
+    }
+
+}
+
+
+/* 📌 Mobil Ekranlar (768px və daha kiçik) */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px !important;
+    }
+
+    .header-bottom {
+        flex-direction: column;
+        gap: 20px !important;
+        margin-bottom: 15px;
+    }
+
+    .home-content {
+        padding: 0 16px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .store-content img {
+        width: 100%;
+        height: auto;
+    }
+
+    .book {
+        width: 100%;
+    }
+
+    .book img {
+        width: 120px;
+        height: 180px;
+    }
+
+    .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .author-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-content img {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-content p {
+        font-size: 18px;
+    }
+
+    .small-banner {
+        display: flex;
+        flex-direction: column;
+        gap: 20px !important;
+        width: 100%;
+    }
+
+    .small-banner img {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 0 16px;
+    }
+
+}
+
+/* 📌 Kiçik Mobil Ekranlar (480px və daha kiçik) */
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 140px;
+        height: auto;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .header-bottom {
+        margin-bottom: 15px;
+    }
+
+    .header-bottom a {
+        font-size: 14px;
+    }
+
+    .home-content {
+        padding: 0 16px;
+    }
+
+    .book img {
+        width: 100px;
+        height: 150px;
+    }
+
+    .store-content img {
+        width: 100%;
+    }
+
+    .contact {
+        gap: 10px;
+    }
+
+    .small-banner {
+        display: flex;
+        flex-direction: column;
+        gap: 20px !important;
+        width: 100%;
+    }
+
+    .small-banner img {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 0 16px;
+    }
+
+    .prev,
+    .next {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
