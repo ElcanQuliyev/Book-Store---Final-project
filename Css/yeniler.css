@@ -96,6 +96,7 @@ img {
     gap: 20px;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .book {
@@ -110,8 +111,11 @@ img {
 }
 
 .book img {
-    width: 150px;
-    height: 200px;
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 170px;
+    height: auto;
 }
 
 .book button {
@@ -187,4 +191,131 @@ footer {
 .footer-about p {
     font-size: 18px;
     text-align: center;
+}
+
+
+
+@media screen and (max-width: 1100px) {
+    nav {
+        display: flex !important;
+        gap: 20px !important;
+        padding: 0 16px;
+    }
+
+    .header-bottom {
+        flex-direction: column;
+        gap: 20px !important;
+        margin-bottom: 30px;
+    }
+
+    .home-content {
+        padding: 0 16px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px !important;
+    }
+
+    .header-bottom {
+        flex-direction: column;
+        gap: 20px !important;
+        margin-bottom: 15px;
+    }
+
+    .home-content {
+        padding: 0 16px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+
+    .store-content img {
+        width: 100%;
+        height: auto;
+    }
+
+    .book {
+        width: 100%;
+    }
+
+    #books-container {
+        display: flex !important;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .book img {
+        display: block;
+        margin: auto;
+        width: 100%;
+        max-width: 120px;
+        height: auto;
+    }
+
+    .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact a {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 140px;
+        height: auto;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .header-bottom {
+        margin-bottom: 15px;
+    }
+
+    .header-bottom a {
+        font-size: 14px;
+    }
+
+    .home-content {
+        padding: 0 16px;
+    }
+
+    .book img {
+        width: 100px;
+        height: 150px;
+    }
+
+    .contact {
+        gap: 10px;
+        padding: 0 16px !important;
+    }
+
+    .contact a {
+        font-size: 16px !important;
+    }
 }
