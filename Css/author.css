@@ -1,15 +1,15 @@
-.main-content{
+.main-content {
     max-width: 1100px;
     margin: auto;
     margin-top: 40px;
     cursor: pointer;
 }
 
-.main-content img{
+.main-content img {
     border-radius: 12px;
 }
 
-.cards{
+.cards {
     padding-left: 120px;
     margin-top: 40px;
     display: grid;
@@ -20,17 +20,169 @@
     align-items: center;
 }
 
-.card{
+.card {
     margin-top: 10px;
 }
 
-.card img{
+.card img {
     width: 371px;
     height: 371px;
 }
 
-.card p{
+.card p {
     color: black;
     font-size: 20px;
     margin: 10px 0 10px 0;
+}
+
+@media screen and (max-width: 1100px) {
+    nav {
+        display: flex !important;
+        gap: 20px !important;
+        padding: 0 16px;
+    }
+
+    .header-bottom {
+        flex-direction: column;
+        gap: 20px !important;
+        margin-bottom: 30px;
+    }
+
+    .main-content {
+        padding: 0 16px;
+    }
+
+    .main-content .talks {
+        width: 100%;
+        max-width: 940px;
+        height: auto;
+    }
+
+    .cards {
+        padding: 0 0 0 30px !important;
+    }
+
+    .store-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .store-content img {
+        width: 80%;
+        height: auto;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px !important;
+    }
+
+    .header-bottom {
+        flex-direction: column;
+        gap: 20px !important;
+        margin-bottom: 15px;
+    }
+
+    .main-content {
+        padding: 0 16px;
+    }
+
+    .main-content .talks {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+    }
+
+    .cards {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        padding: 0px !important;
+    }
+
+    .cards img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .store-content img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact a {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 140px;
+        height: auto;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .header-bottom {
+        margin-bottom: 15px;
+    }
+
+    .header-bottom a {
+        font-size: 14px;
+    }
+
+    .main-content {
+        padding: 0 16px;
+    }
+
+    .main-content .talks {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .cards {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        padding: 0px !important;
+    }
+
+    .cards img {
+        width: 100%;
+        max-width: 180px;
+        height: auto;
+    }
+
+    .contact {
+        gap: 10px;
+        padding: 0 16px !important;
+    }
+
+    .contact a {
+        font-size: 16px !important;
+    }
 }

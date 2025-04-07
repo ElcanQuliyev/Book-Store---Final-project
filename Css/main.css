@@ -286,7 +286,7 @@ button:hover {
     }
 
     .container {
-        padding: 0 16px;    
+        padding: 0 16px;
     }
 
     .store-content {
@@ -396,6 +396,10 @@ button:hover {
         padding: 0 16px;
     }
 
+    .contact a {
+        font-size: 16px !important;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -458,5 +462,9 @@ button:hover {
         height: 35px;
         font-size: 12px;
         background: rgba(0, 0, 0, 0.7);
+    }
+
+    .contact a {
+        font-size: 16px !important;
     }
 }
