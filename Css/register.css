@@ -85,3 +85,68 @@ p a {
     font-weight: 600;
     text-decoration: none;
 }
+
+/* --- Responsivlik --- */
+
+@media screen and (max-width: 1100px) {
+    input {
+        width: 100%;
+        height: 50px;
+    }
+
+    #signUP-btn {
+        width: 100%;
+        height: 50px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    input {
+        width: 100%;
+        height: 50px;
+    }
+
+    #signUP-btn {
+        width: 100%;
+        height: 50px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .login-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .input-box {
+        width: 90%;
+        padding: 0px;
+    }
+
+    input {
+        width: 100%;
+        height: 50px;
+    }
+
+    input:focus {
+        width: 100%;
+    }
+
+    #signUP-btn {
+        width: 100%;
+        height: 50px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    p a {
+        font-size: 16px;
+    }
+}
