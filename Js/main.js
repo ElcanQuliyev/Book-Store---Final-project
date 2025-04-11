@@ -68,7 +68,7 @@ function displayBooks(books) {
             <h3>${title}</h3>
             <p><strong>Müəllif:</strong> ${authors}</p>
             <span>${price} AZN</span>
-            <button onclick="addToCart('${thumbnail}', '${title}', '${price ? price.replace(' AZN', '') : '0'}')">Səbətə əlavə et <i class="fa-solid fa-basket-shopping"></i></button>
+            <button class="add-to-cart" onclick="addToCart('${thumbnail}', '${title}', '${price ? price.replace(' AZN', '') : '0'}')">Səbətə əlavə et <i class="fa-solid fa-basket-shopping"></i></button>
         `;
 
         container.appendChild(bookElement); // HTML-ə əlavə et
