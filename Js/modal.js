@@ -3,14 +3,43 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("search");
     const productContainer = document.getElementById("books-container");
 
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+
+    // 🔔 Yeni: Məlumat yoxdur yazısı üçün yer yaradılır
+    const notFoundMessage = document.createElement("div");
+    notFoundMessage.textContent = "Belə bir kitab tapılmadı.";
+    notFoundMessage.style.color = "black";
+    notFoundMessage.style.fontSize = "24px";
+    notFoundMessage.style.marginTop = "20px";
+    notFoundMessage.style.display = "none";
+    productContainer.parentElement.appendChild(notFoundMessage);
+
     searchInput?.addEventListener("input", (e) => {
         const searchText = e.target.value.toLowerCase();
         const allProducts = productContainer.querySelectorAll(".book");
+        let found = 0;
 
         allProducts.forEach(product => {
             const productName = product.querySelector("h3").textContent.toLowerCase();
-            product.style.display = productName.includes(searchText) ? "block" : "none";
+            if (productName.includes(searchText)) {
+                product.style.display = "block";
+                found++;
+            } else {
+                product.style.display = "none";
+            }
         });
+
+        // Əgər heç nə tapılmayıbsa
+        if (found === 0) {
+            notFoundMessage.style.display = "block";
+            prevButton.style.display = "none";
+            nextButton.style.display = "none";
+        } else {
+            notFoundMessage.style.display = "none";
+            prevButton.style.display = "block";
+            nextButton.style.display = "block";
+        }
     });
 
     const modal = document.getElementById("productModal");
