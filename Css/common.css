@@ -27,6 +27,15 @@ nav {
     gap: 24px;
 }
 
+#cart{
+    color: white;
+}
+
+#cart:hover{
+    color: #FFA500;
+    transition: color 0.6s ease;
+}
+
 input {
     padding: 14px;
     border-radius: 10px;
@@ -39,7 +48,8 @@ input {
 }
 
 .user {
-    width: 25px;
+    font-size: 25px;
+    color: white;
 }
 
 a {
@@ -54,6 +64,16 @@ a {
     align-items: center;
     cursor: pointer;
     position: relative;
+    gap: 4px;
+}
+
+.user-area:hover i{  
+    color: #FFA500;
+    transition: color 0.6s ease;
+}
+
+.user-area p{
+    color: white;
 }
 
 p {
@@ -62,7 +82,7 @@ p {
 }
 
 .header-bottom {
-    padding-top: 10px;
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,6 +96,7 @@ p {
 
 .header-bottom a:hover {
     color: #FFA500;
+    transition: color 0.6s ease;
 }
 
 .hidden-box {
@@ -113,13 +134,18 @@ p {
 #login {
     border: 1px solid #FFA500;
     padding: 4px 8px;
+    color: white;
     background-color: #FFA500;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
 #login:hover {
-    color: white;
+    background-color: #da9008;
+}
+
+input:focus{
+    outline: none;
 }
 
 #logout {

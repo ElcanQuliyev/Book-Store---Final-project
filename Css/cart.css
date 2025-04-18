@@ -164,6 +164,11 @@ button {
     transition: background-color 0.3s ease-in-out;
 }
 
+#verify-cart:hover {
+    background-color: #FFA500;
+    transition: background-color 0.3s ease-in-out;
+}
+
 footer p {
     text-align: center;
     color: gray;
@@ -260,6 +265,13 @@ footer p {
 
     input {
         width: 90%;
+    }
+
+    #cart-items{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
     }
 
     .container {

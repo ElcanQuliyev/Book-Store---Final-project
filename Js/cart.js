@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartList = document.getElementById("cart-list");
     const totalPrice = document.getElementById("total-price");
     const clearCartBtn = document.getElementById("clear-cart");
+    const verifyCartBtn = document.getElementById("verify-cart");
     const cartCount = document.getElementById("total-price");  // Sayğac üçün HTML elementi
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -44,6 +45,21 @@ document.addEventListener("DOMContentLoaded", () => {
         cart = [];
         cartCount.textContent = 0; // Sayğacı sıfırlayırıq
         updateCart(); // Ümumi qiyməti yeniləyirik
+    });
+
+    verifyCartBtn.addEventListener("click", () => {
+        if (cart.length === 0) {
+            alert("Səbət boşdur. Sifarişi təsdiqləmək üçün məhsul əlavə edin.");
+            return;
+        }
+
+        alert("Uğurla sifariş alındı!");
+
+        // Səbəti təmizlə
+        localStorage.removeItem("cart");
+        cart = [];
+        cartCount.textContent = 0;
+        updateCart();
     });
 });
 
