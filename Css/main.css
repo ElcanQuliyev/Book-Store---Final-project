@@ -281,7 +281,6 @@ button:hover {
 
 .banner img {
     width: 500px;
-    cursor: pointer;
 }
 
 /* Author-area */
@@ -295,10 +294,10 @@ button:hover {
     gap: 40px;
 }
 
-
 .left-content img {
     width: 270px;
     height: 370px;
+    object-fit: cover;
 }
 
 .right-content p {
