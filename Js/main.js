@@ -64,14 +64,14 @@ function autoSlides() {
 
 
 async function fetchBooks() {
-    const url = `https://www.googleapis.com/books/v1/volumes?q=javascript&key=${API_KEY}`;
+    const url = "./data.json";
 
     try {
         nextButton.style.display = "none";
         prevButton.style.display = "none";
         const response = await fetch(url);
         const data = await response.json();
-        displayBooks(data.items); // Kitabları HTML-ə göndər
+        displayBooks(data); // BURADA data.items yox, birbaşa data gəlir
         nextButton.style.display = "block";
         prevButton.style.display = "block";
     } catch (error) {
@@ -85,11 +85,10 @@ function displayBooks(books) {
     container.innerHTML = "";
 
     books.forEach(book => {
-        const bookInfo = book.volumeInfo;
-        const title = bookInfo.title || "Başlıq yoxdur";
-        const authors = bookInfo.authors ? bookInfo.authors.join(", ") : "Müəllif yoxdur";
-        const price = book.saleInfo?.retailPrice?.amount ? `${book.saleInfo.retailPrice.amount} AZN` : "Satışda yoxdur";
-        const thumbnail = bookInfo.imageLinks?.thumbnail || "https://via.placeholder.com/128x192"; // Əgər şəkil yoxdursa, default şəkil qoy
+        const title = book.title || "Başlıq yoxdur";
+        const author = book.author || "Müəllif yoxdur";
+        const price = book.price ? `${book.price} AZN` : "Qiymət yoxdur";
+        const thumbnail = book.image || "https://via.placeholder.com/128x192"; // Şəkil yoxdursa default
 
         // Yeni kitab elementi yaradılır
         const bookElement = document.createElement("div");
@@ -97,9 +96,11 @@ function displayBooks(books) {
         bookElement.innerHTML = `
             <img src="${thumbnail}" alt="${title}">
             <h3>${title}</h3>
-            <p><strong>Müəllif:</strong> ${authors}</p>
-            <span>${price} AZN</span>
-            <button class="add-to-cart" onclick="addToCart('${thumbnail}', '${title}', '${price ? price.replace(' AZN', '') : '0'}')">Səbətə əlavə et <i class="fa-solid fa-basket-shopping"></i></button>
+            <p><strong>Müəllif:</strong> ${author}</p>
+            <span>${price}</span>
+            <button class="add-to-cart" onclick="addToCart('${thumbnail}', '${title}', '${book.price}')">
+                Səbətə əlavə et <i class="fa-solid fa-basket-shopping"></i>
+            </button>
         `;
 
         container.appendChild(bookElement); // HTML-ə əlavə et
@@ -123,7 +124,5 @@ window.addToCart = (thumbnail, title, price) => {
     cartCount.textContent = cart.length; // Sayğacı yenilə
 };
 
-
 // Sayt açılan kimi kitabları yüklə
 fetchBooks();
-
