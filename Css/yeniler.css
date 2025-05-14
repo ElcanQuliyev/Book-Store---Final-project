@@ -190,6 +190,10 @@ button:hover {
     cursor: pointer;
 }
 
+.book img:hover{
+    transform: scale(1.03);
+    transition: transform 0.5s;
+}
 
 .book button:hover {
     color: #FFA500;
@@ -198,6 +202,11 @@ button:hover {
 .store-logo {
     max-width: 1000px;
     margin: auto;
+}
+
+button:hover {
+    color: #FFA500;
+    transition: color 0.6s ease;
 }
 
 .contact {

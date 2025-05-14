@@ -106,16 +106,24 @@ img {
     z-index: 999;
 }
 
+.modalItems{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
 .modal-content {
     background: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 50%;
+    width: 40%;
     display: flex;
     align-items: center;
-    flex-direction: column;
-    gap: 16px;
+    padding-left: 64px;
+    padding-right: 64px;
+    justify-content: space-between;
     position: relative;
 }
 
@@ -234,6 +242,11 @@ h3,
     /* Şəkillərin deformasiya olmamasını təmin edir */
     border-radius: 5px;
     cursor: pointer;
+}
+
+.book img:hover{
+    transform: scale(1.07);
+    transition: transform 0.5s;
 }
 
 h3 {
