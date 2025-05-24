@@ -92,6 +92,81 @@ img {
     }
 }
 
+#imageModal {
+    display: none;
+    /* Başlanğıcda gizlidir */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Arxa fon tünd */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal kontenti */
+.modal-content2 {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Şəklin ölçüsü */
+.modal-content2 img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Başlıq və müəllif */
+.modalItems h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    white-space: normal;   
+    overflow: visible;         
+    text-overflow: unset;    
+    word-break: break-word;    
+}
+
+.modalItems p {
+    font-size: 16px;
+    color: #555;
+}
+
+.close2 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Animasiya */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
 #productModal {
     display: none;
     /* sayt açılanda gizli olsun */
@@ -106,7 +181,7 @@ img {
     z-index: 999;
 }
 
-.modalItems{
+.modalItems {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -114,7 +189,7 @@ img {
 }
 
 .modal-content {
-    background: white;
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -244,7 +319,7 @@ h3,
     cursor: pointer;
 }
 
-.book img:hover{
+.book img:hover {
     transform: scale(1.07);
     transition: transform 0.5s;
 }

@@ -1,12 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 🔍 SEARCH HİSSƏSİ – dəyişilməyib
     const searchInput = document.getElementById("search");
     const productContainer = document.getElementById("books-container");
-
     const prevButton = document.getElementById("prev");
     const nextButton = document.getElementById("next");
 
-    // 🔔 Yeni: Məlumat yoxdur yazısı üçün yer yaradılır
+    const modal = document.getElementById("productModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalAuthor = document.getElementById("modalAuthor");
+    const closeModal = document.querySelector(".close");
+    const goToCart = document.getElementById("goToCart");
+    const continueShopping = document.getElementById("continueShopping");
+
+    const imageModal = document.getElementById("imageModal");
+    const imageModalImg = document.getElementById("imageModalImg");
+    const imageModalTitle = document.getElementById("imageModalTitle");
+    const imageModalAuthor = document.getElementById("imageModalAuthor");
+    const closeModal2 = document.querySelector(".close2");
+
+    // 🔔 Məlumat yoxdur mesajı
     const notFoundMessage = document.createElement("div");
     notFoundMessage.textContent = "Belə bir kitab tapılmadı.";
     notFoundMessage.style.color = "black";
@@ -30,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Əgər heç nə tapılmayıbsa
         if (found === 0) {
             notFoundMessage.style.display = "block";
             prevButton.style.display = "none";
@@ -42,18 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    const modal = document.getElementById("productModal");
-    const modalImg = document.getElementById("modalImg");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalAuthor = document.getElementById("modalAuthor");
-    const closeModal = document.querySelector(".close");
-    const goToCart = document.getElementById("goToCart");
-    const continueShopping = document.getElementById("continueShopping");
-
-    // Modalı yalnız add-to-cart class-ı olan düyməyə klik ediləndə aç
+    // Add-to-cart modal
     document.body.addEventListener("click", (e) => {
         if (e.target.classList.contains("add-to-cart")) {
-            const product = e.target.closest(".book"); // <-- "book" class-ı səndə var
+            const product = e.target.closest(".book");
             if (product) {
                 const imgSrc = product.querySelector("img")?.src;
                 const title = product.querySelector("h3")?.textContent;
@@ -66,16 +69,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 modal.style.display = "flex";
             }
         }
+
+        // Şəkil kliklənəndə açılan modal
+        if (e.target.tagName === "IMG" && e.target.closest(".book")) {
+            const product = e.target.closest(".book");
+            const imgSrc = product.querySelector("img")?.src;
+            const title = product.querySelector("h3")?.textContent;
+            const author = product.querySelector("p")?.textContent || "";
+
+            imageModalImg.src = imgSrc;
+            imageModalTitle.textContent = title;
+            imageModalAuthor.textContent = author;
+
+            imageModal.style.display = "flex";
+        }
     });
 
-    // Modalı bağlama
+    // Modalları bağlama
     closeModal?.addEventListener("click", () => {
         modal.style.display = "none";
+    });
+
+    closeModal2?.addEventListener("click", () => {
+        imageModal.style.display = "none";
     });
 
     window.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none";
+        }
+        if (e.target === imageModal) {
+            imageModal.style.display = "none";
         }
     });
 
