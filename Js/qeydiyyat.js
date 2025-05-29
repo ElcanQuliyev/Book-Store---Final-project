@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Qeydiyyat
+    // Qeydiyyat (sign up)
     const registerBtn = document.getElementById("signUP-btn");
     if (registerBtn) {
         registerBtn.addEventListener("click", () => {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Giriş
+    // Giriş (login)
     const loginBtn = document.getElementById("logIn-btn");
     if (loginBtn) {
         loginBtn.addEventListener("click", () => {
@@ -32,11 +32,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("İstifadəçi adı və ya şifrə yanlışdır!");
             }
         });
-    }
-
-    // İstifadəçi giriş etməyibsə, ana səhifəyə daxil olmasını blok edirik
-    if (window.location.pathname.includes("main.html") && localStorage.getItem("loggedIn") !== "true") {
-        alert("Xahiş olunur, əvvəlcə giriş edin!");
-        window.location.href = "login.html";
     }
 });
