@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -19,6 +19,29 @@ nav {
     justify-content: center;
     width: 100%;
     gap: 100px;
+    position: relative;
+}
+
+.bars:hover i {
+    color: #FFA500;
+    transition: color 0.6s ease;
+}
+
+nav .bars {
+    position: absolute;
+    right: 0%;
+    top: 10;
+    padding-right: 10px;
+}
+
+.user-area p:hover {
+    color: #FFA500;
+    transition: color 0.6s ease;
+}
+
+.user-area i:hover {
+    color: #FFA500;
+    transition: color 0.6s ease;
 }
 
 .personal-area {
@@ -27,11 +50,11 @@ nav {
     gap: 24px;
 }
 
-#cart{
+#cart {
     color: white;
 }
 
-#cart:hover{
+#cart:hover {
     color: #FFA500;
     transition: color 0.6s ease;
 }
@@ -67,12 +90,7 @@ a {
     gap: 4px;
 }
 
-.user-area:hover i{  
-    color: #FFA500;
-    transition: color 0.6s ease;
-}
-
-.user-area p{
+.user-area p {
     color: white;
 }
 
@@ -92,6 +110,7 @@ p {
 .header-bottom a {
     font-size: 18px;
     font-weight: 700;
+    color: gray;
 }
 
 .header-bottom a:hover {
@@ -120,6 +139,78 @@ p {
     visibility: visible;
 }
 
+.user {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.user i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar p,
+a {
+    font-size: 16px;
+    color: white;
+}
+
+.bars {
+    border: none;
+    background-color: transparent;
+}
+
+.fa-bars {
+    color: white;
+    font-size: 22px;
+}
+
+.menu-button {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background-color: rgba(109, 76, 65, 0.9);
+    box-sizing: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: flex-start;
+    display: none;
+    padding: 24px 16px;
+}
+
+.user p {
+    cursor: pointer;
+}
+
+.user p:hover {
+    color: #FFA500;
+    transition: color 0.6s ease;
+}
+
+.sidebar a:hover {
+    color: #FFA500;
+    transition: color 0.6s ease;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.sidebar i {
+    color: white;
+}
+
 .account {
     display: flex;
     flex-direction: column;
@@ -144,7 +235,7 @@ p {
     background-color: #da9008;
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
 

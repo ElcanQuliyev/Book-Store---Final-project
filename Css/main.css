@@ -133,10 +133,10 @@ img {
 .modalItems h3 {
     font-size: 20px;
     margin-bottom: 10px;
-    white-space: normal;   
-    overflow: visible;         
-    text-overflow: unset;    
-    word-break: break-word;    
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    word-break: break-word;
 }
 
 .modalItems p {
@@ -396,23 +396,68 @@ button:hover {
 /* --- Responsivlik --- */
 
 @media screen and (max-width: 1100px) {
+    .menu-button {
+        display: block !important;
+    }
+
+    nav .logo,
+    .personal-area {
+        display: none !important;
+    }
+
     nav {
-        display: flex !important;
-        gap: 20px !important;
-        padding: 0 16px;
+        height: 70px;
+        gap: 0 !important;
     }
 
     .header-bottom {
-        flex-direction: column;
-        gap: 20px !important;
-        margin-bottom: 30px;
+        display: none !important;
     }
 
     .home-content {
-        padding: 0 16px;
+        padding: 40px 16px 0 16px;
+    }
+
+    .modalItems {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .modalItems h3 {
+        font-size: 18px;
+    }
+
+    .modalItems p,
+    button {
+        font-size: 14px;
+    }
+
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .modal img {
+        width: 130px;
+        height: auto;
+        margin-bottom: 10px;
     }
 
     .container {
+        max-width: 700px;
+        margin: auto;
+        margin-top: 40px;
         padding: 0 16px;
     }
 
@@ -443,8 +488,13 @@ button:hover {
         width: 100%;
     }
 
+    .small-banner .banner {
+        width: 80%;
+    }
+
     .small-banner img {
         width: 100%;
+        object-fit: cover;
     }
 
     .main-content {
@@ -453,22 +503,49 @@ button:hover {
 
 }
 
-
 @media screen and (max-width: 768px) {
     nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px !important;
-    }
-
-    .header-bottom {
-        flex-direction: column;
-        gap: 20px !important;
-        margin-bottom: 15px;
+        height: 70px;
     }
 
     .home-content {
-        padding: 0 16px;
+        padding: 40px 16px 0 16px;
+    }
+
+    .modalItems {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .modalItems h3 {
+        font-size: 16px;
+    }
+
+    .modalItems p,
+    button {
+        font-size: 14px;
+    }
+
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .modal img {
+        width: 110px;
+        height: auto;
+        margin-bottom: 10px;
     }
 
     .container {
@@ -480,6 +557,19 @@ button:hover {
         height: auto;
     }
 
+    #books-container {
+        max-height: 500px !important;
+        width: auto;
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        text-align: center;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
     .book {
         width: 100%;
     }
@@ -487,6 +577,12 @@ button:hover {
     .book img {
         width: 120px;
         height: 180px;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: auto;
+        margin-top: 40px;
     }
 
     .contact {
@@ -530,16 +626,51 @@ button:hover {
 }
 
 @media screen and (max-width: 480px) {
-    .logo {
-        width: 140px;
-        height: auto;
-    }
 
     input {
-        width: 90%;
+        width: 70%;
+    }
+
+    .modalItems {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .modalItems h3 {
+        font-size: 14px;
+    }
+
+    .modalItems p,
+    button {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 95%;
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .modal img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px;
     }
 
     .container {
+        max-width: 180px;
+        margin: auto;
+        margin-top: 40px;
         padding: 0 16px;
     }
 
@@ -552,7 +683,7 @@ button:hover {
     }
 
     .home-content {
-        padding: 0 16px;
+        padding: 40px 16px 0 16px;
     }
 
     .book img {

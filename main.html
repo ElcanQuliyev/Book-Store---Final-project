@@ -32,7 +32,33 @@
                     </div>
                 </div>
             </div>
+
+            <button class="bars menu-button" onclick="showSidebar()"><i class="fa-solid fa-bars"></i></button>
         </nav>
+
+        <div class="sidebar">
+            <button class="bars" onclick="hideSidebar()"><i class="fa-solid fa-x"></i></button>
+            <a href="main.html"><img src="images/download.png" alt="" class="logo"
+                    style="width: 150px; height: auto;"></a>
+            <div class="user">
+                <i class="fa-solid fa-user user"></i>
+                <p class="user-item">giriş et</p>
+
+                <div class="hidden-box">
+                    <div class="account">
+                        <a href="login.html" id="login">Qeydiyyat</a>
+                        <a href="#" id="logout">Çıxış</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cart">
+                <a href="cart.html" id="cart"><i class="fa-solid fa-cart-shopping"></i> Səbət (<span
+                        id="cart-count">0</span>)</a>
+            </div>
+            <a href="yeniler.html" class="header-link">Yeniler</a>
+            <a href="author.html" class="header-link">Müəlliflər</a>
+            <a href="haqqımızda.html" class="header-link">Haqqımızda</a>
+        </div>
     </header>
     <div class="header-bottom">
         <a href="yeniler.html" class="header-link">Yeniler</a>
@@ -186,8 +212,12 @@
         });
     </script>
 
+
+
     <script src="Js/modal.js"></script>
     <script src="Js/main.js"></script>
+    <script src="Js/slider.js"></script>
+    <script src="Js/burgerMenu.js"></script>
 
     <script src="https://kit.fontawesome.com/7972087a8c.js" crossorigin="anonymous"></script>
 </body>

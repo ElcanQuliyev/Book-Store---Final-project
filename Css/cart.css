@@ -24,6 +24,25 @@ nav {
     width: 25px;
 }
 
+.user-bar{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+.user-bar p {
+    cursor: pointer;
+}
+
+.user-bar p:hover {
+    color: #FFA500;
+    transition: color 0.6s ease;
+}
+
+.user-bar .user{
+    font-size: 20px;
+}
+
 a {
     display: inline-block;
     text-decoration: none;
@@ -177,16 +196,22 @@ footer p {
 /* --- Responsivlik --- */
 
 @media screen and (max-width: 1100px) {
+    .menu-button {
+        display: block !important;
+    }
+
+    nav .logo,
+    .user-area {
+        display: none !important;
+    }
+
     nav {
-        display: flex !important;
-        gap: 20px !important;
-        padding: 0 16px;
+        height: 70px;
+        gap: 0 !important;
     }
 
     .header-bottom {
-        flex-direction: column;
-        gap: 20px !important;
-        margin-bottom: 30px;
+        display: none !important;
     }
 
     h1{
