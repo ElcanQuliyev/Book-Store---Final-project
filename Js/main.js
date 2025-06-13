@@ -7,28 +7,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // İstifadəçi adını göstərmək
-    const userItem = document.querySelector(".user-item");
+    const userItems = document.querySelectorAll(".user-item");
     const savedUser = JSON.parse(localStorage.getItem("user"));
     const isLoggedIn = localStorage.getItem("loggedIn") === "true";
 
-    if (userItem && isLoggedIn && savedUser?.username) {
-        userItem.textContent = ` ${savedUser.username}`;
-    }
-
-    // Çıxış funksiyası
-    const logoutBtn = document.getElementById("logout");
-    if (logoutBtn) {
-        logoutBtn.addEventListener("click", () => {
-            localStorage.removeItem("loggedIn");
-            alert("Sistemdən çıxış etdiniz.");
-            window.location.href = "login.html";
+    if (isLoggedIn && savedUser?.username) {
+        userItems.forEach(item => {
+            item.textContent = ` ${savedUser.username}`;
         });
     }
 
+    // Çıxış funksiyası
+    document.querySelectorAll(".logout-btn").forEach(button => {
+        button.addEventListener("click", () => {
+            localStorage.removeItem("loggedIn");
+            localStorage.removeItem("userName");
+            window.location.href = "login.html";
+        });
+    });
+
     // Səbət göstəricisi
-    const cartCount = document.getElementById("cart-count");
+    const cartCount = document.querySelectorAll("#cart-count");
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cartCount.textContent = cart.length;
+
+    cartCount.forEach(el => {
+        el.textContent = cart.length;
+    });
 
     // Kitabları yüklə
     async function fetchBooks() {
@@ -96,7 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         cart.push({ thumbnail, title, price });
         localStorage.setItem("cart", JSON.stringify(cart));
-        cartCount.textContent = cart.length;
+    
+        // Hamısına yenilə:
+        document.querySelectorAll("#cart-count").forEach(el => {
+            el.textContent = cart.length;
+        });
     };
 
     fetchBooks();

@@ -263,7 +263,7 @@ input:focus {
     outline: none;
 }
 
-#logout {
+.logout-btn {
     border: 1px solid #6D4C41;
     padding: 4px 8px;
     background-color: #6D4C41;
@@ -271,7 +271,7 @@ input:focus {
     color: white;
 }
 
-#logout:hover {
+.logout-btn:hover {
     background-color: #a3705e;
     border: 1px solid #a3705e;
 }
