@@ -27,7 +27,7 @@
                     <div class="hidden-box">
                         <div class="account">
                             <a href="login.html" id="login">Qeydiyyat</a>
-                            <a href="#" id="logout">Çıxış</a>
+                            <a href="#" class="logout-btn">Çıxış</a>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                 <div class="hidden-box-1">
                     <div class="account">
                         <a href="login.html" id="login">Qeydiyyat</a>
-                        <a href="#" id="logout">Çıxış</a>
+                        <a href="#" class="logout-btn">Çıxış</a>
                     </div>
                 </div>
             </div>
@@ -134,13 +134,6 @@
             <p>© 2025 Mini Mağaza. Bütün hüquqlar qorunur.</p>
         </div>
     </footer>
-
-    <script>
-        document.getElementById("logout").addEventListener("click", () => {
-            localStorage.removeItem("loggedIn");
-            window.location.href = "login.html";
-        });
-    </script>
 
     <script src="Js/main.js"></script>
     <script src="Js/burgerMenu.js"></script>
