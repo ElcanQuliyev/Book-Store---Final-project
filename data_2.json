@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Qarabağnamə",
+        "author": "Mirzə Adıgözəl bəy",
+        "price": 11.0,
+        "image": "./images/QARABAGNAMƏLƏR-600x903.jpg"
+    },
+    {
+        "title": "Məsumlar",
+        "author": "Burhan Sönmez",
+        "price": 5.5,
+        "image": "./images/mesumlar.jpg"
+    },
+    {
+        "title": "Mələk",
+        "author": "Qaraqan",
+        "price": 13.0,
+        "image": "images/Melek_qapaq__1_.webp"
+    },
+    {
+        "title": "The Innocence of Memories",
+        "author": "Orhan Pamuk",
+        "price": 12.5,
+        "image": "./images/Orhan pamuk.webp"
+    },
+    {
+        "title": "Paris ve Londrada Beş Parasız",
+        "author": "George Orwell",
+        "price": 10.0,
+        "image": "./images/george orvel.webp"
+    },
+    {
+        "title": "Uzaqdan gələn yağış",
+        "author": "Varis",
+        "price": 11.5,
+        "image": "./images/Varis_01.webp"
+    },
+    {
+        "title": "Milyonçu zəkasının sirləri",
+        "author": "T.Harv Eker",
+        "price": 8.0,
+        "image": "./images/MILYONCU_ZEKASININ_SIRLERI_qapaq.webp"
+    },
+    {
+        "title": "Əsrarəngiz bağ",
+        "author": "Frances Hodgson Burnett",
+        "price": 9.0,
+        "image": "https://m.media-amazon.com/images/I/81gTwYAhU7L.jpg"
+    },
+    {
+        "title": "Mobius",
+        "author": "Adam Fawer",
+        "price": 14.0,
+        "image": "./images/adam fawer.webp"
+    },
+    {
+        "title": "Evlilik və əxlaq",
+        "author": "Bertrand Russell",
+        "price": 13.0,
+        "image": "./images/Bertran_Rassel_Evlilik_qapaq_Esas.webp"
+    },
+    {
+        "title": "Balaca Şahzadə",
+        "author": "Antoine de Saint-Exupéry",
+        "price": 6.5,
+        "image": "./images/balaca sahzade.webp"
+    },
+    {
+        "title": "Milenaya Məktublar",
+        "author": "Franz Kafka",
+        "price": 8.5,
+        "image": "./images/Kafka-Milena-Kapak-Esas-1.webp"
+    },
+    {
+        "title": "Nizami Gəncəvi Divanı",
+        "author": "Nizami Gəncəvi",
+        "price": 15.0,
+        "image": "./images/Nizami_Gəncəvi-_Azərbaycanca_yazdığı_divan.webp"
+    },
+    {
+        "title": "Qəzəllər (Əliağa Vahid)",
+        "author": "Əliağa Vahid",
+        "price": 12.0,
+        "image": "./images/Esas_Eliaga_Vahid_Kapak_2020.webp"
+    },
+    {
+        "title": "Zəvvarlıq",
+        "author": "Paulo Koelyo",
+        "price": 5.0,
+        "image": "./images/ZEVVARLIQ_qapaq.webp"
+    }
+]

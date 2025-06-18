@@ -215,7 +215,7 @@ img {
     margin-bottom: 10px;
 }
 
-/* books */
+/* slide 1 */
 .container {
     max-width: 900px;
     position: relative;
@@ -237,6 +237,8 @@ h2 {
     background-color: #6D4C41;
     top: 35%;
     z-index: 3;
+    cursor: pointer;
+    border: none;   
 }
 
 #prev {
@@ -336,18 +338,127 @@ span {
     font-weight: 700;
 }
 
-button {
+.add-to-cart {
     cursor: pointer;
     border: none;
     font-size: 16px;
     font-weight: 600;
     color: gray;
+    background-color: white;
 }
 
-button:hover {
+.add-to-cart:hover {
     color: #FFA500;
 }
 
+/* slide 2 */
+.container_2 {
+    max-width: 900px;
+    position: relative;
+    margin: auto;
+    margin-top: 40px;
+}
+
+#prev_2,
+#next_2 {
+    color: black;
+    width: 30px;
+    height: 100px;
+    border-radius: 12px;
+    background-color: #6D4C41;
+    top: 35%;
+    z-index: 3;
+    cursor: pointer;
+    border: none;   
+}
+
+#prev_2 {
+    position: absolute;
+    left: -50px;
+}
+
+#next_2 {
+    position: absolute;
+    right: -50px;
+}
+
+#prev_2:hover {
+    background-color: #FFA500;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#next_2:hover {
+    background-color: #FFA500;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#books-container_2 {
+    max-height: 1000px;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.book_2 {
+    width: 160px;
+    /* Eyni genişlik */
+    height: 340px;
+    /* Eyni hündürlük */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* Elementlər arasında düzgün məsafə saxlayır */
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.book_2 span {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.book_2 p {
+    margin-bottom: 8px;
+}
+
+h3,
+.book_2 p,
+.book_2 span {
+    display: block;
+    text-align: center;
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.book_2 img {
+    width: 140px;
+    height: 200px;
+    object-fit: cover;
+    /* Şəkillərin deformasiya olmamasını təmin edir */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book_2 img:hover {
+    transform: scale(1.07);
+    transition: transform 0.5s;
+}
+
+.book_2 p {
+    font-size: 12px;
+}
 
 /* Banner-area */
 
