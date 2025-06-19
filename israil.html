@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book-Store</title>
-    <link rel="stylesheet" href="Css/haqqımızda.css">
     <link rel="stylesheet" href="Css/common.css">
+    <link rel="stylesheet" href="Css/israil.css">
     <link rel="shortcut icon" href="images/1600w-deIvdmK9R7E.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -66,36 +66,59 @@
         <a href="haqqımızda.html" class="header-link">Haqqımızda</a>
     </div>
 
-    <div class="main-content">
+    <div class="home-content">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="images/2186018_babil-slider-sehadet-web_210016.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/2167214_babil-slider-gurbilek-web_468947.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/2172747_babil-slider-da-vinci-web_422242.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/2167222_babil-slider-bauman-web_230590.png" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+
+    <div class="t">
+        <div class="card">
+            <img src="images/2183777_babil-banner-web-israil_301014.png" alt="">
+            <p>Bu kitab, İsrail dövlətinin yaranması, fəaliyyəti və onun bölgədə, eləcə də dünya səviyyəsində törətdiyi
+                siyasi və sosial problemlər, həmçinin regionda yaratdığı ziddiyyətlər və münaqişələr barədə tənqidi
+                yanaşma təqdim edir. Kitabda İsrailin fəaliyyətlərinin tənqidi və onun regional və qlobal siyasətdəki
+                rolu dərindən araşdırılır.</p>
+        </div>
+
+
         <div class="store-logo">
+            <h2>Store Logo</h2>
             <div class="store-content">
                 <img src="images/985e2607-f76e-4776-b48e-59199693085d.png" alt="">
                 <p>RİMBERİO BOOK STORE</p>
             </div>
         </div>
-
-        <p>Kitablar bizə yeni dünyaların qapısını açır, biliklərimizi artırır və xəyal gücümüzü genişləndirir.
-            RİMBERİO
-            olaraq, biz də məhz bu məqsədlə – kitabsevərləri ən yaxşı nəşrlərlə bir araya gətirmək üçün yola
-            çıxdıq.
-
-            Platformamızda ədəbiyyat, elmi-fantastika, biznes, texnologiya, şəxsi inkişaf və daha bir çox janrda
-            kitabları tapa bilərsiniz. Seçimlərimiz diqqətlə tərtib olunmuş, oxucuların zövqünə uyğun kitablar
-            təqdim
-            etməyə yönəlib. <br>
-
-            Sizlər üçün:<br><br>
-            📚 Geniş kitab kataloqu – Müxtəlif janrlarda minlərlə kitab<br><br>
-            🚀 Rahat sifariş prosesi – Sürətli və təhlükəsiz alış-veriş<br><br>
-            👥 Kitabsevərlər üçün icma – Rəylərinizi paylaşa və tövsiyələr ala bilərsiniz<br><br>
-
-            Bizimlə oxumağı sevən hər kəs istədiyi kitabları asanlıqla tapa, sifariş edə və ən qısa müddətdə əldə
-            edə
-            bilər. Hədəfimiz yalnız kitab satmaq deyil – insanlara ilham vermək və mütaliəni həyatın ayrılmaz
-            hissəsinə
-            çevirməkdir.
-
-            Oxumağa olan sevginizi bizimlə bölüşün və RİMBERİO ailəsinə qoşulun! 📖✨</p>
 
         <div class="contact">
             <div class="social-media">
@@ -103,7 +126,8 @@
                 <a href="https://www.linkedin.com/in/elcan-quliyev-3a95a6352/" class="media-link"><i
                         class="fa-brands fa-linkedin-in"></i> Linkedln</a>
                 <a href="https://www.instagram.com/__quliyevh/" class="media-link"><i
-                        class="fa-brands fa-instagram"></i> Instagram</a>
+                        class="fa-brands fa-instagram"></i>
+                    Instagram</a>
             </div>
 
             <div class="about">
@@ -115,14 +139,20 @@
         </div>
     </div>
 
+
+
+    </div>
+
     <footer>
         <div class="footer-about">
             <p>© 2025 Mini Mağaza. Bütün hüquqlar qorunur.</p>
         </div>
     </footer>
 
+    <script src="Js/slider.js"></script>
     <script src="Js/main.js"></script>
     <script src="Js/burgerMenu.js"></script>
+
     <script src="https://kit.fontawesome.com/7972087a8c.js" crossorigin="anonymous"></script>
 </body>
 

@@ -220,7 +220,7 @@ img {
     max-width: 900px;
     position: relative;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 h2 {
@@ -277,9 +277,9 @@ h2 {
 }
 
 .book {
-    width: 160px;
+    width: 170px;
     /* Eyni genişlik */
-    height: 340px;
+    height: 370px;
     /* Eyni hündürlük */
     display: flex;
     flex-direction: column;
@@ -312,8 +312,8 @@ h3,
 }
 
 .book img {
-    width: 140px;
-    height: 200px;
+    width: 150px;
+    height: 230px;
     object-fit: cover;
     /* Şəkillərin deformasiya olmamasını təmin edir */
     border-radius: 5px;
@@ -356,7 +356,7 @@ span {
     max-width: 900px;
     position: relative;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 #prev_2,
@@ -408,9 +408,9 @@ span {
 }
 
 .book_2 {
-    width: 160px;
+    width: 170px;
     /* Eyni genişlik */
-    height: 340px;
+    height: 370px;
     /* Eyni hündürlük */
     display: flex;
     flex-direction: column;
@@ -443,8 +443,8 @@ h3,
 }
 
 .book_2 img {
-    width: 140px;
-    height: 200px;
+    width: 150px;
+    height: 230px;
     object-fit: cover;
     /* Şəkillərin deformasiya olmamasını təmin edir */
     border-radius: 5px;

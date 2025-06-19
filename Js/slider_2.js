@@ -58,12 +58,12 @@ function displayBooks(books) {
 
     nextButton_2.addEventListener("click", () => {
         container_2.style.scrollBehavior = "smooth";
-        container_2.scrollLeft += 1000;
+        container_2.scrollLeft += 950;
     });
 
     prevButton_2.addEventListener("click", () => {
         container_2.style.scrollBehavior = "smooth";
-        container_2.scrollLeft -= 1000;
+        container_2.scrollLeft -= 950;
     });
 }
 
