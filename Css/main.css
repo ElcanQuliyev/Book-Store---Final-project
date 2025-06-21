@@ -209,6 +209,21 @@ img {
     cursor: pointer;
 }
 
+.modalItems button {
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.modalItems button:hover {
+    color: #FFA500;
+    transition: color 0.6s ease;
+}
+
+button{
+    cursor: pointer;
+}
+
 .modal img {
     width: 150px;
     height: auto;
@@ -238,7 +253,7 @@ h2 {
     top: 35%;
     z-index: 3;
     cursor: pointer;
-    border: none;   
+    border: none;
 }
 
 #prev {
@@ -369,7 +384,7 @@ span {
     top: 35%;
     z-index: 3;
     cursor: pointer;
-    border: none;   
+    border: none;
 }
 
 #prev_2 {
@@ -572,6 +587,13 @@ h3,
         padding: 0 16px;
     }
 
+    .container_2 {
+        max-width: 700px;
+        margin: auto;
+        margin-top: 40px;
+        padding: 0 16px;
+    }
+
     .store-content {
         flex-direction: column;
         text-align: center;
@@ -599,12 +621,8 @@ h3,
         width: 100%;
     }
 
-    .small-banner .banner {
-        width: 80%;
-    }
-
     .small-banner img {
-        width: 100%;
+        width: 750px;
         object-fit: cover;
     }
 
@@ -685,12 +703,13 @@ h3,
         width: 100%;
     }
 
-    .book img {
-        width: 120px;
-        height: 180px;
+    .container {
+        max-width: 400px;
+        margin: auto;
+        margin-top: 40px;
     }
 
-    .container {
+    .container_2 {
         max-width: 400px;
         margin: auto;
         margin-top: 40px;
@@ -720,6 +739,10 @@ h3,
         flex-direction: column;
         gap: 20px !important;
         width: 100%;
+    }
+
+    .author-content img {
+        width: 500px;
     }
 
     .small-banner img {
@@ -779,7 +802,14 @@ h3,
     }
 
     .container {
-        max-width: 180px;
+        max-width: 210px;
+        margin: auto;
+        margin-top: 40px;
+        padding: 0 16px;
+    }
+
+    .container_2 {
+        max-width: 210px;
         margin: auto;
         margin-top: 40px;
         padding: 0 16px;
@@ -797,9 +827,8 @@ h3,
         padding: 40px 16px 0 16px;
     }
 
-    .book img {
-        width: 100px;
-        height: 150px;
+    .author-content img {
+        width: 250px;
     }
 
     .store-content img {
@@ -823,14 +852,6 @@ h3,
 
     .main-content {
         padding: 0 16px;
-    }
-
-    .prev,
-    .next {
-        width: 35px;
-        height: 35px;
-        font-size: 12px;
-        background: rgba(0, 0, 0, 0.7);
     }
 
     .contact a {
