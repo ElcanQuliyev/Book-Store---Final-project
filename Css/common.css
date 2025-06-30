@@ -41,12 +41,10 @@ nav .bars {
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top: 30%;
-    left: 140%;
-    transform: translateX(-50%);
+    top: 70%;
+    right: -90%;
     background: white;
     border: 2px solid gray;
-    padding: 6px 14px;
     border-radius: 8px;
     z-index: 10;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -150,7 +148,6 @@ p {
     transform: translateX(-50%);
     background: white;
     border: 2px solid gray;
-    padding: 10px 20px;
     border-radius: 8px;
     z-index: 10;
     transition: opacity 0.3s ease, visibility 0.3s ease;

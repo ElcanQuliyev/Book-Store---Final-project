@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Şehadete Tanıklık Ediyor",
+        "author": "Norman Finkelstein",
+        "price": 11.0,
+        "image": "./images/2186018_babil-slider-sehadet-web_210016.png"
+    },
+    {
+        "title": "Bir eleştiri ustası",
+        "author": "Nurdan Gürbilek",
+        "price": 5.5,
+        "image": "./images/2167214_babil-slider-gurbilek-web_468947.png"
+    },
+    {
+        "title": "Resim Yapmayı Nereden öyrendi?",
+        "author": "Leonardo Da Vinci",
+        "price": 13.0,
+        "image": "./images/2172747_babil-slider-da-vinci-web_422242.png"
+    },
+    {
+        "title": "Bir Dünya sosyoloji:",
+        "author": "Zygmunt Bauman",
+        "price": 12.5,
+        "image": "./images/2167222_babil-slider-bauman-web_230590.png"
+    }
+]
