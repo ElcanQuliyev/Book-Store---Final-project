@@ -42,15 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const prevButton = document.getElementById("prev");
 
         try {
-            nextButton.style.display = "none";
-            prevButton.style.display = "none";
+            if(nextButton) nextButton.style.display = "none";
+            if(prevButton) prevButton.style.display = "none";
 
             const response = await fetch(url);
             const data = await response.json();
             displayBooks(data);
 
-            nextButton.style.display = "block";
-            prevButton.style.display = "block";
+            if(nextButton) nextButton.style.display = "block";
+            if(prevButton) prevButton.style.display = "block";
         } catch (error) {
             console.error("Xəta baş verdi:", error);
         }
@@ -61,22 +61,27 @@ document.addEventListener("DOMContentLoaded", () => {
         const nextButton = document.getElementById("next");
         const prevButton = document.getElementById("prev");
 
+        if (!container) {
+            console.warn("books-container tapılmadı!");
+            return;
+        }
+
         container.innerHTML = "";
 
         books.forEach(book => {
             const title = book.title || "Başlıq yoxdur";
             const author = book.author || "Müəllif yoxdur";
             const price = book.price ? `${book.price} AZN` : "Qiymət yoxdur";
-            const thumbnail = book.image || "https://via.placeholder.com/128x192";
+            const image = book.image || "https://via.placeholder.com/128x192";
 
             const bookElement = document.createElement("div");
             bookElement.classList.add("book");
             bookElement.innerHTML = `
-                <img src="${thumbnail}" alt="${title}">
+                <img src="${image}" alt="${title}">
                 <h3>${title}</h3>
                 <p><strong>Müəllif:</strong> ${author}</p>
                 <span>${price}</span>
-                <button class="add-to-cart" onclick="addToCart('${thumbnail}', '${title}', '${book.price}')">
+                <button class="add-to-cart" onclick="addToCart('${image}', '${title}', '${book.price}')">
                     Səbətə əlavə et <i class="fa-solid fa-basket-shopping"></i>
                 </button>
             `;
@@ -84,24 +89,28 @@ document.addEventListener("DOMContentLoaded", () => {
             container.appendChild(bookElement);
         });
 
-        nextButton.addEventListener("click", () => {
-            container.style.scrollBehavior = "smooth";
-            container.scrollLeft += 950;
-        });
+        if(nextButton) {
+            nextButton.addEventListener("click", () => {
+                container.style.scrollBehavior = "smooth";
+                container.scrollLeft += 950;
+            });
+        }
 
-        prevButton.addEventListener("click", () => {
-            container.style.scrollBehavior = "smooth";
-            container.scrollLeft -= 950;
-        });
+        if(prevButton) {
+            prevButton.addEventListener("click", () => {
+                container.style.scrollBehavior = "smooth";
+                container.scrollLeft -= 950;
+            });
+        }
     }
 
     // Səbətə əlavə funksiyası
-    window.addToCart = (thumbnail, title, price) => {
+    window.addToCart = (image, title, price) => {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.push({ thumbnail, title, price });
+        cart.push({ image, title, price });
         localStorage.setItem("cart", JSON.stringify(cart));
-    
-        // Hamısına yenilə:
+
+        // Səbət sayı yenilə
         document.querySelectorAll("#cart-count").forEach(el => {
             el.textContent = cart.length;
         });
@@ -109,3 +118,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetchBooks();
 });
+

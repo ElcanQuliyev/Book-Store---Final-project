@@ -68,23 +68,8 @@
 
     <div class="home-content">
         <!-- Slideshow container -->
-        <div class="slideshow-container">
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-                <img src="images/2186018_babil-slider-sehadet-web_210016.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="images/2167214_babil-slider-gurbilek-web_468947.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="images/2172747_babil-slider-da-vinci-web_422242.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="images/2167222_babil-slider-bauman-web_230590.png" style="width:100%">
-            </div>
+        <div class="slideshow-container" id="slideshow">
+            <!-- jsondan sekiller elave olunacaq -->
 
             <!-- Next and previous buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -98,6 +83,21 @@
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+    <!-- Modal 1 ci slider ucun -->
+    <div id="productModal2" class="modal2">
+        <div class="modal-content3">
+            <span class="close3">&times;</span>
+            <img id="modalImg2" src="" alt="Məhsul şəkli">
+            <div class="modalItems2">
+                <h3 id="modalTitle2"></h3>
+                <p id="modalAuthor2"></p>
+                <button id="addToCart2">Səbətə əlavə et</button>
+                <button id="goToCart2">Səbətə Get</button>
+                <button id="continueShopping2">Alış-verişə Davam Et</button>
+            </div>
         </div>
     </div>
 

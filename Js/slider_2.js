@@ -54,16 +54,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const title = book.title || "Başlıq yoxdur";
             const author = book.author || "Müəllif yoxdur";
             const price = book.price ? `${book.price} AZN` : "Qiymət yoxdur";
-            const thumbnail = book.image || "https://via.placeholder.com/128x192";
+            const image = book.image || "https://via.placeholder.com/128x192";
 
             const bookElement = document.createElement("div");
             bookElement.classList.add("book_2");
             bookElement.innerHTML = `
-                <img src="${thumbnail}" alt="${title}">
+                <img src="${image}" alt="${title}">
                 <h3>${title}</h3>
                 <p><strong>Müəllif:</strong> ${author}</p>
                 <span>${price}</span>
-                <button class="add-to-cart" onclick="addToCart('${thumbnail}', '${title}', '${book.price}')">
+                <button class="add-to-cart" onclick="addToCart('${image}', '${title}', '${book.price}')">
                     Səbətə əlavə et <i class="fa-solid fa-basket-shopping"></i>
                 </button>
             `;
@@ -83,9 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Səbətə əlavə funksiyası
-    window.addToCart = (thumbnail, title, price) => {
+    window.addToCart = (image, title, price) => {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.push({ thumbnail, title, price });
+        cart.push({ image, title, price });
         localStorage.setItem("cart", JSON.stringify(cart));
 
         document.querySelectorAll("#cart-count").forEach(el => {
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Modal göstər
-        modalImg.src = thumbnail;
+        modalImg.src = image;
         modalTitle.textContent = title;
         modalAuthor.textContent = "";
         modal.style.display = "flex";

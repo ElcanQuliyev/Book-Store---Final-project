@@ -62,6 +62,11 @@ a {
     color: gray;
 }
 
+#cart-list img {
+    width: 200px;
+    height: 210px;
+    border-radius: 16px;
+}
 
 .header-bottom {
     padding-top: 10px;

@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             total += price;
 
             cartItem.innerHTML = `
-                <img src="${item.thumbnail}" alt="${item.title}">
+                <img src="${item.image}" alt="${item.title}">
                 <p>${item.title} - ${price.toFixed(2)} AZN</p>
                 <button class="remove-btn">❌ Sil</button>
             `;
