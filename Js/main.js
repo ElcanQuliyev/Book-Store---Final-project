@@ -6,10 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
+    // Qeydiyyat linkini gizlətmək (əgər login olunubsa)
+    const registerLink = document.getElementById("login");
+    const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+
+    if (isLoggedIn && registerLink) {
+        registerLink.style.display = "none";
+    }
+
     // İstifadəçi adını göstərmək
     const userItems = document.querySelectorAll(".user-item");
     const savedUser = JSON.parse(localStorage.getItem("user"));
-    const isLoggedIn = localStorage.getItem("loggedIn") === "true";
 
     if (isLoggedIn && savedUser?.username) {
         userItems.forEach(item => {
@@ -42,15 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const prevButton = document.getElementById("prev");
 
         try {
-            if(nextButton) nextButton.style.display = "none";
-            if(prevButton) prevButton.style.display = "none";
+            if (nextButton) nextButton.style.display = "none";
+            if (prevButton) prevButton.style.display = "none";
 
             const response = await fetch(url);
             const data = await response.json();
             displayBooks(data);
 
-            if(nextButton) nextButton.style.display = "block";
-            if(prevButton) prevButton.style.display = "block";
+            if (nextButton) nextButton.style.display = "block";
+            if (prevButton) prevButton.style.display = "block";
         } catch (error) {
             console.error("Xəta baş verdi:", error);
         }
@@ -89,14 +96,14 @@ document.addEventListener("DOMContentLoaded", () => {
             container.appendChild(bookElement);
         });
 
-        if(nextButton) {
+        if (nextButton) {
             nextButton.addEventListener("click", () => {
                 container.style.scrollBehavior = "smooth";
                 container.scrollLeft += 950;
             });
         }
 
-        if(prevButton) {
+        if (prevButton) {
             prevButton.addEventListener("click", () => {
                 container.style.scrollBehavior = "smooth";
                 container.scrollLeft -= 950;
@@ -118,4 +125,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetchBooks();
 });
+
 
