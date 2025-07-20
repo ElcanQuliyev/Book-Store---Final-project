@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const isMainPage = window.location.pathname.includes("main.html");
+
     // İstifadəçi login olub-olmadığını yoxla
-    if (window.location.pathname.includes("main.html") && localStorage.getItem("loggedIn") !== "true") {
+    if (isMainPage && localStorage.getItem("loggedIn") !== "true") {
         alert("Xahiş olunur, əvvəlcə giriş edin!");
         window.location.href = "login.html";
         return;
@@ -49,15 +51,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const prevButton = document.getElementById("prev");
 
         try {
-            if (nextButton) nextButton.style.display = "none";
-            if (prevButton) prevButton.style.display = "none";
+            // Yalnız main.html üçün göstər
+            if (isMainPage) {
+                if (nextButton) nextButton.style.display = "block";
+                if (prevButton) prevButton.style.display = "block";
+            } else {
+                if (nextButton) nextButton.style.display = "none";
+                if (prevButton) prevButton.style.display = "none";
+            }
 
             const response = await fetch(url);
             const data = await response.json();
             displayBooks(data);
-
-            if (nextButton) nextButton.style.display = "block";
-            if (prevButton) prevButton.style.display = "block";
         } catch (error) {
             console.error("Xəta baş verdi:", error);
         }
@@ -96,18 +101,21 @@ document.addEventListener("DOMContentLoaded", () => {
             container.appendChild(bookElement);
         });
 
-        if (nextButton) {
-            nextButton.addEventListener("click", () => {
-                container.style.scrollBehavior = "smooth";
-                container.scrollLeft += 950;
-            });
-        }
+        // Slider düymələri yalnız main.html üçün aktiv olsun
+        if (isMainPage) {
+            if (nextButton) {
+                nextButton.addEventListener("click", () => {
+                    container.style.scrollBehavior = "smooth";
+                    container.scrollLeft += 950;
+                });
+            }
 
-        if (prevButton) {
-            prevButton.addEventListener("click", () => {
-                container.style.scrollBehavior = "smooth";
-                container.scrollLeft -= 950;
-            });
+            if (prevButton) {
+                prevButton.addEventListener("click", () => {
+                    container.style.scrollBehavior = "smooth";
+                    container.scrollLeft -= 950;
+                });
+            }
         }
     }
 
@@ -125,5 +133,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetchBooks();
 });
-
-

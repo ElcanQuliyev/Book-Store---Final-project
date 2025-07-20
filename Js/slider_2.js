@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const isMainPage = window.location.pathname.includes("main.html");
+
     // Səbət göstəricisi
     const cartCount = document.querySelectorAll("#cart-count");
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -29,21 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
         const prevButton_2 = document.getElementById("prev_2");
 
         try {
-            nextButton_2.style.display = "none";
-            prevButton_2.style.display = "none";
+            if (!isMainPage) {
+                // Əgər main.html deyilsə, buttonlar görünməsin
+                if (nextButton_2) nextButton_2.style.display = "none";
+                if (prevButton_2) prevButton_2.style.display = "none";
+            }
 
             const response = await fetch(url);
             const data = await response.json();
-            displayBooks(data);
-
-            nextButton_2.style.display = "block";
-            prevButton_2.style.display = "block";
+            displayBooks(data, isMainPage);
         } catch (error) {
             console.error("Xəta baş verdi:", error);
         }
     }
 
-    function displayBooks(books) {
+    function displayBooks(books, enableButtons) {
         const container_2 = document.getElementById("books-container_2");
         const nextButton_2 = document.getElementById("next_2");
         const prevButton_2 = document.getElementById("prev_2");
@@ -71,15 +73,21 @@ document.addEventListener("DOMContentLoaded", () => {
             container_2.appendChild(bookElement);
         });
 
-        nextButton_2.addEventListener("click", () => {
-            container_2.style.scrollBehavior = "smooth";
-            container_2.scrollLeft += 950;
-        });
+        // Yalnız main.html-də düymələr işləsin
+        if (enableButtons && nextButton_2 && prevButton_2) {
+            nextButton_2.style.display = "block";
+            prevButton_2.style.display = "block";
 
-        prevButton_2.addEventListener("click", () => {
-            container_2.style.scrollBehavior = "smooth";
-            container_2.scrollLeft -= 950;
-        });
+            nextButton_2.addEventListener("click", () => {
+                container_2.style.scrollBehavior = "smooth";
+                container_2.scrollLeft += 950;
+            });
+
+            prevButton_2.addEventListener("click", () => {
+                container_2.style.scrollBehavior = "smooth";
+                container_2.scrollLeft -= 950;
+            });
+        }
     }
 
     // Səbətə əlavə funksiyası
@@ -101,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Modal eventləri
     document.body.addEventListener("click", (e) => {
-        // Şəklin kliklənməsi üçün modal
         if (e.target.tagName === "IMG" && e.target.closest(".book_2")) {
             const product = e.target.closest(".book_2");
             const imgSrc = product.querySelector("img")?.src;
