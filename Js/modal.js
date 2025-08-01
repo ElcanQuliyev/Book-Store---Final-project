@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevButton = document.getElementById("prev");
     const nextButton = document.getElementById("next");
 
+    const isMainPage = window.location.pathname.includes("main.html"); // ✅ ƏLAVƏ EDİLDİ
+
     const modal = document.getElementById("productModal");
     const modalImg = document.getElementById("modalImg");
     const modalTitle = document.getElementById("modalTitle");
@@ -18,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageModalAuthor = document.getElementById("imageModalAuthor");
     const closeModal2 = document.querySelector(".close2");
 
-    // 🔔 Məlumat yoxdur mesajı
     const notFoundMessage = document.createElement("div");
     notFoundMessage.textContent = "Belə bir kitab tapılmadı.";
     notFoundMessage.style.color = "black";
@@ -44,12 +45,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (found === 0) {
             notFoundMessage.style.display = "block";
-            prevButton.style.display = "none";
-            nextButton.style.display = "none";
+            if (isMainPage) {
+                prevButton.style.display = "none";
+                nextButton.style.display = "none";
+            }
         } else {
             notFoundMessage.style.display = "none";
-            prevButton.style.display = "block";
-            nextButton.style.display = "block";
+            if (isMainPage) {
+                prevButton.style.display = "block";
+                nextButton.style.display = "block";
+            }
         }
     });
 
