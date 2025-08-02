@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book-Store</title>
-    <link rel="stylesheet" href="Css/author.css">
     <link rel="stylesheet" href="Css/common.css">
+    <link rel="stylesheet" href="Css/muellif.css">
     <link rel="shortcut icon" href="images/1600w-deIvdmK9R7E.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -66,39 +66,72 @@
         <a href="haqqımızda.html" class="header-link">Haqqımızda</a>
     </div>
 
-    <div class="main-content">
-        <img src="images/0464184_290422_Babil-WebSlider-BabilTalks-3_197544.png" alt="" class="talks">
+    <div class="home-content">
+        <!-- Slideshow container -->
+        <div class="slideshow-container" id="slideshow">
+            <!-- jsondan sekiller elave olunacaq -->
 
-        <div class="cards">
-            <div class="card">
-                <a href="muellif-1.html"><img src="images/2030286_63346_250118.png" alt=""></a>
-                <p>Filistin Meselesinin Dünü ve Bugünü Hakkında</p>
-            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
 
-            <div class="card">
-                <a href="muellif-2.html"><img src="images/0465573_180522_Babil-BabilTalksCovers-UygarMitat_200561.png" alt=""></a>
-                <p>Hücrelerden Yıldızlara</p>
-            </div>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
 
-            <div class="card">
-                <a href=""><img src="images/0464277_0604522_Babil-BabilTalksCovers-BurakBilgehan_165653.png" alt=""></a>
-                <p>Varoluşla Temas Okumaları</p>
+    <!-- Modal 1 ci slider ucun -->
+    <div id="productModal2" class="modal2">
+        <div class="modal-content3">
+            <span class="close3">&times;</span>
+            <img id="modalImg2" src="" alt="Məhsul şəkli">
+            <div class="modalItems2">
+                <h3 id="modalTitle2"></h3>
+                <p id="modalAuthor2"></p>
+                <button id="addToCart2">Səbətə əlavə et</button>
+                <button id="goToCart2">Səbətə Get</button>
+                <button id="continueShopping2">Alış-verişə Davam Et</button>
             </div>
+        </div>
+    </div>
 
-            <div class="card">
-                <a href=""><img src="images/0464627_090522_Babil-BabilTalksCovers-UmurTalu_158621.png" alt=""></a>
-                <p>Kitaplara Yolculuğum</p>
-            </div>
 
-            <div class="card">
-                <a href=""><img src="images/0468526_100622_Babil-BabilTalksCovers-MesutVarlik_132983.png" alt=""></a>
-                <p>Bir “Sakat” Liste</p>
-            </div>
+    <div class="cards">
+        <div class="card">
+            <img src="images/2030286_63346_250118.png" alt="">
+            <p>
+            <h5>Döyüşçü Şairin Portreti: Lissauer Rollanla qarşı</h5>
+            20-ci əsrin böyük alman yazıçısı Stefan Zweiq, vahid Avropanın sürüşən idealı üçün zərif xatirələrinin ədəbi
+            cəhətdən nəfis kolleksiyası olan "Dünənin dünyası"nda müharibə əleyhinə mövqe tutan və müharibəni qızışdıran
+            iki ziyalının portretlərini ehtiva edir: Romain Rollandu və Ernst. Müharibələr və şiddətli qarşıdurma
+            dövrləri cəmiyyətlərin mənəvi çöküşüdür.
 
-            <div class="card">
-                <a href=""><img src="images/0465988_250522_Babil-BabilTalksCovers-GulgunTurkogluPagy_155590.png" alt=""></a>
-                <p>Farklı Dünyalara Yolculuk</p>
-            </div>
+            <h5>Qırğınlar, İqnorlar və Norman Finkelşteynin "Qəzza" əsəri haqqında.</h5>
+            Norman Finkelstein "Qəzza və Şahidlik Şəhidliyi" adlı kitabında Qərbdəki tənbəl beyinlərin və beynəlxalq
+            ictimaiyyətin şübhəsiz qəbul etdiyi arqumentləri irəli sürür; Deməsinin çətin olduğunu, bəzilərinin görüb,
+            lakin dilə gətirməyə cəsarət etmədiklərini bizə inadla və qətiyyətlə bəyan edir: Tarixin ən böyük
+            faciələrindən biri Fələstində və Qəzzada baş verir; bu açıq-aydın işğal və məsuliyyətsiz soyqırımdır! Sosial
+            şəbəkələrdə milyonlarla.
+
+            <h5>Suriyanın Yeni Dövründə Münaqişə Dinamikası və Bəzi Proqnozlar</h5>
+            Suriyanın yeni dövründə 2011-ci ildən bəri davam edən vətəndaş müharibəsinin nikbin olduğunu düşünürəm. Bu
+            baxımdan daxili mübarizənin yeni mərhələyə qədəm qoyduğunu söyləmək daha real olardı. Hərbi çevrilişlə
+            hakimiyyətə gələn və 60 ildən artıq hakimiyyətdə olan Baas rejimi ilə Suriyada 24 illik Bəşər Əsəd rejimi
+            heç bir ciddi müqavimət göstərə bilməyərək bir neçə gün ərzində süqut etdi.
+
+            <h5>Türkiyədə Fələstin/İsrail qavrayışı – Hökumətdən Məsafə Saxlayan Mühafizəkar/Dini Seqmentlər</h5>
+            Türkiyədə səsvermə davranışına və siyasi diskursa baxsaq, iqtidara qarşı olan cəmiyyətin geniş təbəqələrinin
+            mövcudluğu heç kimə sirr deyil. Lakin bu seqmentlər, şübhəsiz ki, monolit bir varlıq təşkil etmir. Onların
+            əhəmiyyətli bir hissəsi mövcud hökumətə rəğbət bəsləsə də, İsraillə ticarətin davam etdirilməsini xüsusilə
+            tənqid edir. Ənənəvi mühafizəkarlar adlandırıla bilən başqa bir seqment daxili siyasi ab-havada hakimiyyətə
+            qarşı çıxır.
+            </p>
         </div>
 
 
@@ -116,7 +149,8 @@
                 <a href="https://www.linkedin.com/in/elcan-quliyev-3a95a6352/" class="media-link"><i
                         class="fa-brands fa-linkedin-in"></i> Linkedln</a>
                 <a href="https://www.instagram.com/__quliyevh/" class="media-link"><i
-                        class="fa-brands fa-instagram"></i> Instagram</a>
+                        class="fa-brands fa-instagram"></i>
+                    Instagram</a>
             </div>
 
             <div class="about">
@@ -126,6 +160,9 @@
                 <p>WhatsApp -la əlaqə saxlaya bilərsiz</p>
             </div>
         </div>
+    </div>
+
+
 
     </div>
 
@@ -135,8 +172,10 @@
         </div>
     </footer>
 
+    <script src="Js/slider.js"></script>
     <script src="Js/main.js"></script>
     <script src="Js/burgerMenu.js"></script>
+
     <script src="https://kit.fontawesome.com/7972087a8c.js" crossorigin="anonymous"></script>
 </body>
 
