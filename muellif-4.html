@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book-Store</title>
-    <link rel="stylesheet" href="Css/author.css">
     <link rel="stylesheet" href="Css/common.css">
+    <link rel="stylesheet" href="Css/muellif.css">
     <link rel="shortcut icon" href="images/1600w-deIvdmK9R7E.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -66,39 +66,55 @@
         <a href="haqqımızda.html" class="header-link">Haqqımızda</a>
     </div>
 
-    <div class="main-content">
-        <img src="images/0464184_290422_Babil-WebSlider-BabilTalks-3_197544.png" alt="" class="talks">
+    <div class="home-content">
+        <!-- Slideshow container -->
+        <div class="slideshow-container" id="slideshow">
+            <!-- jsondan sekiller elave olunacaq -->
 
-        <div class="cards">
-            <div class="card">
-                <a href="muellif-1.html"><img src="images/2030286_63346_250118.png" alt=""></a>
-                <p>Filistin Meselesinin Dünü ve Bugünü Hakkında</p>
-            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
 
-            <div class="card">
-                <a href="muellif-2.html"><img src="images/0465573_180522_Babil-BabilTalksCovers-UygarMitat_200561.png" alt=""></a>
-                <p>Hücrelerden Yıldızlara</p>
-            </div>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
 
-            <div class="card">
-                <a href="muellif-3.html"><img src="images/0464277_0604522_Babil-BabilTalksCovers-BurakBilgehan_165653.png" alt=""></a>
-                <p>Varoluşla Temas Okumaları</p>
+    <!-- Modal 1 ci slider ucun -->
+    <div id="productModal2" class="modal2">
+        <div class="modal-content3">
+            <span class="close3">&times;</span>
+            <img id="modalImg2" src="" alt="Məhsul şəkli">
+            <div class="modalItems2">
+                <h3 id="modalTitle2"></h3>
+                <p id="modalAuthor2"></p>
+                <button id="addToCart2">Səbətə əlavə et</button>
+                <button id="goToCart2">Səbətə Get</button>
+                <button id="continueShopping2">Alış-verişə Davam Et</button>
             </div>
+        </div>
+    </div>
 
-            <div class="card">
-                <a href="muellif-4.html"><img src="images/0464627_090522_Babil-BabilTalksCovers-UmurTalu_158621.png" alt=""></a>
-                <p>Kitaplara Yolculuğum</p>
-            </div>
 
-            <div class="card">
-                <a href="muellif-5.html"><img src="images/0468526_100622_Babil-BabilTalksCovers-MesutVarlik_132983.png" alt=""></a>
-                <p>Bir “Sakat” Liste</p>
-            </div>
-
-            <div class="card">
-                <a href="muellif-6.html"><img src="images/0465988_250522_Babil-BabilTalksCovers-GulgunTurkogluPagy_155590.png" alt=""></a>
-                <p>Farklı Dünyalara Yolculuk</p>
-            </div>
+    <div class="cards">
+        <div class="card">
+            <img src="images/0464627_090522_Babil-BabilTalksCovers-UmurTalu_158621.png" alt="">
+            <p>
+                Məhdud siyahı tərtib edərkən insanın seçdiyi, buraxdığı və ya almadığı kitabların ümumi xüsusiyyəti ola
+                bilərmi? Ola bilər ki, onları oxuyub seviblər, ya da oxuyurlar və ya oxumaq istəyirlər. Bəzən məqalə,
+                esse, araşdırma və ya sənədli film üçün oxuyan kimsə; bəzən bir zehni və emosional səyahət və ya macəra
+                üçün, siyahısını tərtib edərkən ikincisinə sadiq qalmağa meyllidir. Bu siyahının macərası eynidir:
+                sualdan suala, bilikdən biliyə, duyğudan duyğuya səyahət. Mən heç kimin öz ağlının, ürəyinin və ruhunun
+                səyahəti üçün kitablar vasitəsilə öz səyahətinin qrafikini çəkmək istəmirəm. Bu, sadəcə olaraq, indi, bu
+                günlərdə öz səyahətimin əksidir. Onların hamısını öz zəhməti, ağlı və ürəyi ilə bizə çatdıranlara
+                hörmətlə.
+            </p>
         </div>
 
 
@@ -116,7 +132,8 @@
                 <a href="https://www.linkedin.com/in/elcan-quliyev-3a95a6352/" class="media-link"><i
                         class="fa-brands fa-linkedin-in"></i> Linkedln</a>
                 <a href="https://www.instagram.com/__quliyevh/" class="media-link"><i
-                        class="fa-brands fa-instagram"></i> Instagram</a>
+                        class="fa-brands fa-instagram"></i>
+                    Instagram</a>
             </div>
 
             <div class="about">
@@ -126,6 +143,9 @@
                 <p>WhatsApp -la əlaqə saxlaya bilərsiz</p>
             </div>
         </div>
+    </div>
+
+
 
     </div>
 
@@ -135,8 +155,10 @@
         </div>
     </footer>
 
+    <script src="Js/slider.js"></script>
     <script src="Js/main.js"></script>
     <script src="Js/burgerMenu.js"></script>
+
     <script src="https://kit.fontawesome.com/7972087a8c.js" crossorigin="anonymous"></script>
 </body>
 
