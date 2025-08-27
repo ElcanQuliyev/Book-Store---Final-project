@@ -21,7 +21,7 @@
 
                 <div class="hidden-box">
                     <div class="account">
-                        <a href="login.html" id="login">Qeydiyyat</a>
+                        <a href="login.html" class="login-btn">Qeydiyyat</a>
                         <a href="#" class="logout-btn">Çıxış</a>
                     </div>
                 </div>
@@ -34,13 +34,13 @@
             <button class="bars" onclick="hideSidebar()"><i class="fa-solid fa-x"></i></button>
             <a href="main.html"><img src="images/download.png" alt="" class="logo"
                     style="width: 150px; height: auto;"></a>
-            <div class="user-bar">
+            <div class="user">
                 <i class="fa-solid fa-user"></i>
                 <p class="user-item">giriş et</p>
 
                 <div class="hidden-box-1">
                     <div class="account">
-                        <a href="login.html" id="login">Qeydiyyat</a>
+                        <a href="login.html" class="login-btn">Qeydiyyat</a>
                         <a href="#" class="logout-btn">Çıxış</a>
                     </div>
                 </div>
@@ -58,6 +58,19 @@
         <a href="yeniler.html" class="header-link">Yeniler</a>
         <a href="author.html" class="header-link">Müəlliflər</a>
         <a href="haqqımızda.html" class="header-link">Haqqımızda</a>
+    </div>
+
+    <div id="orderPopup" class="popup">
+        <div class="popup-content">
+            <span id="popupClose" class="popup-close">&times;</span>
+            <h2>Sifariş uğurla alındı 🎉</h2>
+
+            <!-- Kitab siyahısı -->
+            <div id="popupBooks" class="popup-books"></div>
+
+            <!-- OK düyməsi -->
+            <button id="popupOk" class="popup-ok">OK</button>
+        </div>
     </div>
 
 

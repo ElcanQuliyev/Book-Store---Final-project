@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const clearCartBtn = document.getElementById("clear-cart");
     const verifyCartBtn = document.getElementById("verify-cart");
 
+    // Popup elementləri
+    const orderPopup = document.getElementById("orderPopup");
+    const popupClose = document.getElementById("popupClose");
+    const popupBooks = document.getElementById("popupBooks");
+    const popupOk = document.getElementById("popupOk");
+
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     updateCart();
@@ -16,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const cartItem = document.createElement("div");
             cartItem.classList.add("cart-item");
 
-            // Qiyməti rəqəm formatına çevir
             let price = 0;
             if (typeof item.price === "string") {
                 price = parseFloat(item.price.toString().replace(/[^\d.]/g, ""));
@@ -31,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="remove-btn">❌ Sil</button>
             `;
 
-            // Sil düyməsinə event əlavə et
             const removeBtn = cartItem.querySelector(".remove-btn");
             removeBtn.addEventListener("click", () => {
                 cart.splice(index, 1);
@@ -57,7 +61,30 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        alert("Uğurla sifariş alındı!");
+        // Popup siyahısını təmizlə
+        popupBooks.innerHTML = "";
+
+        // Səbətdəki bütün kitabları popup-a əlavə et
+        cart.forEach(item => {
+            const bookDiv = document.createElement("div");
+            bookDiv.classList.add("book");
+            bookDiv.innerHTML = `
+                <img src="${item.image}" alt="${item.title}">
+                <p>${item.title}</p>
+            `;
+            popupBooks.appendChild(bookDiv);
+        });
+
+        // Popup göstər
+        orderPopup.style.display = "flex";
+    });
+
+    popupClose.addEventListener("click", () => {
+        orderPopup.style.display = "none";
+    });
+
+    popupOk.addEventListener("click", () => {
+        orderPopup.style.display = "none";
         localStorage.removeItem("cart");
         cart = [];
         updateCart();

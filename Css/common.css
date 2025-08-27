@@ -241,7 +241,7 @@ a {
     font-weight: 500;
 }
 
-#login {
+.login-btn {
     border: 1px solid #FFA500;
     padding: 4px 8px;
     color: white;
@@ -250,7 +250,7 @@ a {
     margin-bottom: 10px;
 }
 
-#login:hover {
+.login-btn:hover {
     background-color: #da9008;
 }
 

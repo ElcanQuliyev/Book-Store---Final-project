@@ -24,7 +24,7 @@ nav {
     width: 25px;
 }
 
-.user-bar{
+.user-bar {
     display: flex;
     gap: 2px;
     align-items: center;
@@ -39,7 +39,7 @@ nav {
     transition: color 0.6s ease;
 }
 
-.user-bar .user{
+.user-bar .user {
     font-size: 20px;
 }
 
@@ -63,8 +63,8 @@ a {
 }
 
 #cart-list img {
-    width: 200px;
-    height: 210px;
+    width: 260px;
+    height: 240px;
     border-radius: 16px;
 }
 
@@ -89,7 +89,6 @@ a {
     font-size: 18px;
 }
 
-
 .hidden-box {
     opacity: 0;
     visibility: hidden;
@@ -108,7 +107,6 @@ a {
     opacity: 1;
     visibility: visible;
 }
-
 
 #login {
     border: 1px solid #FFA500;
@@ -133,6 +131,78 @@ a {
 #logout:hover {
     background-color: #a3705e;
     border: 1px solid #a3705e;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 400px;
+    max-height: 500px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.popup-books {
+    margin-top: 15px;
+}
+
+.popup-books .book {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.popup-books img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+
+.popup-books p {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.popup-ok {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.popup-ok:hover {
+    background: #45a049;
 }
 
 .content {
@@ -217,7 +287,7 @@ footer p {
         display: none !important;
     }
 
-    h1{
+    h1 {
         font-size: 45px !important;
     }
 
@@ -261,7 +331,7 @@ footer p {
         margin-bottom: 15px;
     }
 
-    h1{
+    h1 {
         font-size: 40px !important;
     }
 
@@ -295,7 +365,7 @@ footer p {
         width: 90%;
     }
 
-    #cart-items{
+    #cart-items {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -310,7 +380,7 @@ footer p {
         margin-bottom: 15px;
     }
 
-    h1{
+    h1 {
         font-size: 30px !important;
         margin: 30px 0 !important;
     }

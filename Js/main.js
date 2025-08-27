@@ -1,36 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
     const isMainPage = window.location.pathname.includes("main.html");
 
-    // İstifadəçi login olub-olmadığını yoxla
+    // Əgər login olunmayıbsa və main.html-dədirsə → login səhifəsinə yönləndir
     if (isMainPage && localStorage.getItem("loggedIn") !== "true") {
         alert("Xahiş olunur, əvvəlcə giriş edin!");
         window.location.href = "login.html";
         return;
     }
 
-    // Qeydiyyat linkini gizlətmək (əgər login olunubsa)
-    const registerLink = document.getElementById("login");
-    const isLoggedIn = localStorage.getItem("loggedIn") === "true";
-
-    if (isLoggedIn && registerLink) {
-        registerLink.style.display = "none";
-    }
-
-    // İstifadəçi adını göstərmək
+    // Login və logout düymələri
+    const loginLinks = document.querySelectorAll(".login-btn");
+    const logoutBtns = document.querySelectorAll(".logout-btn");
     const userItems = document.querySelectorAll(".user-item");
+
+    const isLoggedIn = localStorage.getItem("loggedIn") === "true";
     const savedUser = JSON.parse(localStorage.getItem("user"));
 
-    if (isLoggedIn && savedUser?.username) {
-        userItems.forEach(item => {
-            item.textContent = ` ${savedUser.username}`;
-        });
+    if (isLoggedIn) {
+        // Qeydiyyat linklərini gizlət
+        loginLinks.forEach(link => link.style.display = "none");
+        // Logout düymələrini göstər
+        logoutBtns.forEach(btn => btn.style.display = "block");
+
+        // İstifadəçi adını göstər
+        if (savedUser?.username) {
+            userItems.forEach(item => {
+                item.textContent = ` ${savedUser.username}`;
+            });
+        }
+    } else {
+        loginLinks.forEach(link => link.style.display = "block");
+        logoutBtns.forEach(btn => btn.style.display = "none");
     }
 
     // Çıxış funksiyası
-    document.querySelectorAll(".logout-btn").forEach(button => {
+    logoutBtns.forEach(button => {
         button.addEventListener("click", () => {
             localStorage.removeItem("loggedIn");
-            localStorage.removeItem("userName");
+            localStorage.removeItem("user");
             window.location.href = "login.html";
         });
     });
@@ -51,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const prevButton = document.getElementById("prev");
 
         try {
-            // Yalnız main.html üçün göstər
+            // Slider düymələrinin görsənməsi
             if (isMainPage) {
                 if (nextButton) nextButton.style.display = "block";
                 if (prevButton) prevButton.style.display = "block";
@@ -101,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
             container.appendChild(bookElement);
         });
 
-        // Slider düymələri yalnız main.html üçün aktiv olsun
         if (isMainPage) {
             if (nextButton) {
                 nextButton.addEventListener("click", () => {
@@ -125,7 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
         cart.push({ image, title, price });
         localStorage.setItem("cart", JSON.stringify(cart));
 
-        // Səbət sayı yenilə
         document.querySelectorAll("#cart-count").forEach(el => {
             el.textContent = cart.length;
         });
