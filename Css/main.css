@@ -19,10 +19,7 @@ h2 {
 #prev_2,
 #next_2 {
     color: black;
-    width: 30px;
-    height: 100px;
-    border-radius: 12px;
-    background-color: #6D4C41;
+    font-size: 22px;
     top: 35%;
     z-index: 3;
     cursor: pointer;
@@ -43,15 +40,13 @@ h2 {
 
 #prev:hover,
 #prev_2:hover {
-    background-color: #FFA500;
-    color: white;
+    color: #FFA500;
     transition: background-color 0.3s ease-in-out;
 }
 
 #next:hover,
 #next_2:hover {
-    background-color: #FFA500;
-    color: white;
+    color: #FFA500;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -84,9 +79,9 @@ h2 {
 
 .book,
 .book_2 {
-    width: 170px;
+    width: 190px;
     /* Eyni genişlik */
-    height: 370px;
+    height: 390px;
     /* Eyni hündürlük */
     display: flex;
     flex-direction: column;
@@ -124,8 +119,8 @@ h3,
 
 .book img,
 .book_2 img {
-    width: 150px;
-    height: 230px;
+    width: 160px;
+    height: 240px;
     object-fit: cover;
     /* Şəkillərin deformasiya olmamasını təmin edir */
     border-radius: 5px;
@@ -216,18 +211,12 @@ span {
         display: block !important;
     }
 
-    nav .logo,
-    .personal-area {
+    nav a , .user-area{
         display: none !important;
     }
 
     nav {
-        height: 70px;
-        gap: 0 !important;
-    }
-
-    .header-bottom {
-        display: none !important;
+        gap: 60px !important;
     }
 
     .home-content {
@@ -317,10 +306,6 @@ span {
 }
 
 @media screen and (max-width: 768px) {
-    nav {
-        height: 70px;
-    }
-
     .home-content {
         padding: 40px 16px 0 16px;
     }
@@ -439,7 +424,6 @@ span {
 }
 
 @media screen and (max-width: 480px) {
-
     input {
         width: 70%;
     }

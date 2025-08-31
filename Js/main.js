@@ -112,14 +112,14 @@ document.addEventListener("DOMContentLoaded", () => {
             if (nextButton) {
                 nextButton.addEventListener("click", () => {
                     container.style.scrollBehavior = "smooth";
-                    container.scrollLeft += 950;
+                    container.scrollLeft += 800;
                 });
             }
 
             if (prevButton) {
                 prevButton.addEventListener("click", () => {
                     container.style.scrollBehavior = "smooth";
-                    container.scrollLeft -= 950;
+                    container.scrollLeft -= 800;
                 });
             }
         }

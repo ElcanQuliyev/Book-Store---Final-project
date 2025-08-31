@@ -9,7 +9,9 @@ body {
 }
 
 header {
-    background-color: #6D4C41;
+    background-color: #34495E;
+    height: 60px;
+    display: flex;
 }
 
 nav {
@@ -24,6 +26,10 @@ nav {
 .bars:hover i {
     color: #FFA500;
     transition: color 0.6s ease;
+}
+
+nav a {
+    font-size: 18px;
 }
 
 nav .bars {
@@ -71,11 +77,12 @@ nav .bars {
     gap: 24px;
 }
 
-#cart {
-    color: white;
+#cart:hover {
+    color: #FFA500;
+    transition: color 0.6s ease;
 }
 
-#cart:hover {
+nav a:hover {
     color: #FFA500;
     transition: color 0.6s ease;
 }
@@ -84,6 +91,14 @@ input {
     padding: 14px;
     border-radius: 10px;
     border: none;
+    width: 100%;
+    box-shadow: 6px 8px 15px 1px rgba(52,73,94,0.86);
+}
+
+.search-input {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .logo {
@@ -104,7 +119,6 @@ a {
 
 .user-area {
     display: flex;
-    flex-direction: column;
     align-items: center;
     cursor: pointer;
     position: relative;
@@ -120,30 +134,11 @@ p {
     color: gray;
 }
 
-.header-bottom {
-    padding-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 150px;
-}
-
-.header-bottom a {
-    font-size: 18px;
-    font-weight: 700;
-    color: gray;
-}
-
-.header-bottom a:hover {
-    color: #FFA500;
-    transition: color 0.6s ease;
-}
-
 .hidden-box {
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top: 115%;
+    top: 150%;
     right: 0;
     background: white;
     border: 2px solid gray;
@@ -197,7 +192,7 @@ a {
     width: 250px;
     z-index: 999;
     backdrop-filter: blur(10px);
-    background-color: rgba(109, 76, 65, 0.9);
+    background-color: #34495E;
     box-sizing: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
@@ -224,6 +219,7 @@ a {
 
 .sidebar a {
     width: 100%;
+    font-size: 18px;
 }
 
 .sidebar i {
