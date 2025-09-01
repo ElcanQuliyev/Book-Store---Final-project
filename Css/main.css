@@ -424,9 +424,6 @@ span {
 }
 
 @media screen and (max-width: 480px) {
-    input {
-        width: 70%;
-    }
 
     .modalItems {
         display: flex;
@@ -470,14 +467,6 @@ span {
         margin: auto;
         margin-top: 40px;
         padding: 0 16px;
-    }
-
-    .header-bottom {
-        margin-bottom: 15px;
-    }
-
-    .header-bottom a {
-        font-size: 14px;
     }
 
     .home-content {

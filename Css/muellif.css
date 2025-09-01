@@ -207,15 +207,6 @@ h5{
         display: none !important;
     }
 
-    nav {
-        height: 70px;
-        gap: 0 !important;
-    }
-
-    .header-bottom {
-        display: none !important;
-    }
-
     .home-content {
         padding: 40px 16px 0 16px;
     }
@@ -254,9 +245,6 @@ h5{
 }
 
 @media screen and (max-width: 768px) {
-    nav {
-        height: 70px;
-    }
 
     .home-content {
         padding: 40px 16px 0 16px;
@@ -304,18 +292,6 @@ h5{
 }
 
 @media screen and (max-width: 480px) {
-
-    input {
-        width: 70%;
-    }
-
-    .header-bottom {
-        margin-bottom: 15px;
-    }
-
-    .header-bottom a {
-        font-size: 14px;
-    }
 
     .home-content {
         padding: 40px 16px 0 16px;

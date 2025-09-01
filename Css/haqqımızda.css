@@ -57,15 +57,6 @@
 
 
 @media screen and (max-width: 768px) {
-    nav {
-        height: 70px;
-    }
-
-    .header-bottom {
-        flex-direction: column;
-        gap: 20px !important;
-        margin-bottom: 15px;
-    }
 
     .store-content img {
         width: 100%;
@@ -88,21 +79,6 @@
 }
 
 @media screen and (max-width: 480px) {
-    input {
-        width: 70%;
-    }
-
-    .container {
-        padding: 0 16px;
-    }
-
-    .header-bottom {
-        margin-bottom: 15px;
-    }
-
-    .header-bottom a {
-        font-size: 14px;
-    }
 
     .store-content img {
         width: 100%;
