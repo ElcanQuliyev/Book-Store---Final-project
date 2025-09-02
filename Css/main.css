@@ -211,16 +211,17 @@ span {
         display: block !important;
     }
 
-    nav a , .user-area{
+    nav a,
+    .user-area {
         display: none !important;
-    }
-
-    nav {
-        gap: 60px !important;
     }
 
     .home-content {
         padding: 40px 16px 0 16px;
+    }
+
+    .search-input {
+        padding: 0 16px;
     }
 
     .modalItems {
@@ -453,6 +454,11 @@ span {
         padding-right: 10px;
         justify-content: space-between;
         position: relative;
+    }
+
+    #modalImg2 {
+        width: 260px;
+        height: 180px;
     }
 
     .modal img {

@@ -169,12 +169,12 @@ footer {
         display: none !important;
     }
 
-    nav {
-        gap: 60px !important;
-    }
-
     .home-content {
         padding: 40px 16px 0 16px;
+    }
+
+    .search-input {
+        padding: 0 16px;
     }
 
     .modalItems {
@@ -333,6 +333,11 @@ footer {
         width: 100px;
         height: auto;
         margin-bottom: 10px;
+    }
+
+    #modalImg2 {
+        width: 260px;
+        height: 180px;
     }
 
     #books-container,

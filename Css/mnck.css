@@ -4,6 +4,10 @@
     margin-top: 50px;
 }
 
+.bars {
+    cursor: pointer;
+}
+
 .card img {
     width: 700px;
 }
@@ -194,17 +198,8 @@ img {
         display: block !important;
     }
 
-    nav .logo,
-    .personal-area {
-        display: none !important;
-    }
-
-    nav {
-        height: 70px;
-        gap: 0 !important;
-    }
-
-    .header-bottom {
+    nav a,
+    .user-area {
         display: none !important;
     }
 

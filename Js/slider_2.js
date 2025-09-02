@@ -80,12 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             nextButton_2.addEventListener("click", () => {
                 container_2.style.scrollBehavior = "smooth";
-                container_2.scrollLeft += 950;
+                container_2.scrollLeft += 400;
             });
 
             prevButton_2.addEventListener("click", () => {
                 container_2.style.scrollBehavior = "smooth";
-                container_2.scrollLeft -= 950;
+                container_2.scrollLeft -= 400;
             });
         }
     }

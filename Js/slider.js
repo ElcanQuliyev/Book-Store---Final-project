@@ -6,14 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalImg = document.getElementById("modalImg2");
   const modalTitle = document.getElementById("modalTitle2");
   const modalAuthor = document.getElementById("modalAuthor2");
-  const addToCartBtn = document.getElementById("addToCart2");
-  const goToCartBtn = document.getElementById("goToCart2");
-  const continueShoppingBtn = document.getElementById("continueShopping2");
   const closeBtn = document.querySelector(".close3");
-
-  let currentBook = null;
-
-  updateCartCount();
 
   fetch("data_Slider.json")
     .then(res => res.json())
@@ -29,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
         img.alt = item.title;
         img.style.width = "100%";
         img.addEventListener("click", () => {
-          currentBook = item;
           modalImg.src = item.image;
           modalTitle.textContent = item.title;
           modalAuthor.textContent = `Müəllif: ${item.author}`;
@@ -49,33 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Modal bağla
   closeBtn.addEventListener("click", () => modal.style.display = "none");
-  continueShoppingBtn.addEventListener("click", () => modal.style.display = "none");
-
-  // Modal: səbətə əlavə
-  addToCartBtn.addEventListener("click", () => {
-    if (!currentBook) return;
-
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    // BURA DƏYİŞDİ: səbətdə varsa amma artıq silinibsə də əlavə oluna bilsin
-    const alreadyExists = cart.some(item => item.title === currentBook.title);
-
-    if (!alreadyExists) {
-      cart.push({
-        title: currentBook.title,
-        author: currentBook.author,
-        image: currentBook.image,
-        price: currentBook.price || 0
-      });
-      localStorage.setItem("cart", JSON.stringify(cart));
-      updateCartCount();
-    }
-  });
-
-  // Səbətə keç
-  goToCartBtn.addEventListener("click", () => {
-    window.location.href = "cart.html";
-  });
 
   // Modalı arxa fona klikləyəndə bağla
   window.addEventListener("click", (e) => {
@@ -112,12 +77,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     Array.from(slides).forEach(slide => slide.style.display = "none");
     slides[slideIndex].style.display = "block";
-  }
-
-  function updateCartCount() {
-    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-    document.querySelectorAll("#cart-count, .cart-count").forEach(el => {
-      el.textContent = cartItems.length;
-    });
   }
 });
