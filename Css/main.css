@@ -2,8 +2,9 @@
 
 /* slide 1 */
 .container,
-.container_2 {
-    max-width: 900px;
+.container_2,
+.container_3 {
+    max-width: 1100px;
     position: relative;
     margin: auto;
     margin-top: 50px;
@@ -17,41 +18,44 @@ h2 {
 #prev,
 #next,
 #prev_2,
-#next_2 {
+#next_2,
+#prev_3,
+#next_3 {
     color: black;
     font-size: 22px;
     top: 35%;
+    background-color: transparent;
     z-index: 3;
     cursor: pointer;
     border: none;
 }
 
 #prev,
-#prev_2 {
+#prev_2,
+#prev_3 {
     position: absolute;
     left: -50px;
 }
 
 #next,
-#next_2 {
+#next_2,
+#next_3 {
     position: absolute;
     right: -50px;
 }
 
 #prev:hover,
-#prev_2:hover {
-    color: #FFA500;
-    transition: background-color 0.3s ease-in-out;
-}
-
+#prev_2:hover,
 #next:hover,
-#next_2:hover {
+#next_2:hover,
+#next_3:hover {
     color: #FFA500;
     transition: background-color 0.3s ease-in-out;
 }
 
 #books-container,
-#books-container_2 {
+#books-container_2,
+#books-container_3 {
     max-height: 1000px;
     width: auto;
     overflow: hidden;
@@ -64,21 +68,9 @@ h2 {
     gap: 16px;
 }
 
-.add-to-cart,
-.goToCart,
-.continueShopping,
-.goToCart2,
-.continueShopping2 {
-    background-color: transparent;
-    border: none;
-    color: #333;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
 .book,
-.book_2 {
+.book_2,
+.book_3 {
     width: 190px;
     /* Eyni genişlik */
     height: 390px;
@@ -93,14 +85,14 @@ h2 {
     text-align: center;
 }
 
-.book span,
-.book_2 span {
-    font-size: 12px;
-    margin-bottom: 8px;
-}
-
 .book p,
-.book_2 p {
+.book_2 p,
+.book_3 p,
+.book span,
+.book_2 span,
+.book_3 span {
+    margin-bottom: 8px;
+    font-size: 12px;
     margin-bottom: 8px;
 }
 
@@ -108,7 +100,9 @@ h3,
 .book p,
 .book span,
 .book_2 p,
-.book_2 span {
+.book_2 span,
+.book_3 p,
+.book_3 span {
     display: block;
     text-align: center;
     max-width: 140px;
@@ -118,7 +112,8 @@ h3,
 }
 
 .book img,
-.book_2 img {
+.book_2 img,
+.book_3 img {
     width: 160px;
     height: 240px;
     object-fit: cover;
@@ -128,17 +123,13 @@ h3,
 }
 
 .book img:hover,
-.book_2 img:hover {
+.book_2 img:hover,
+.book_3 img:hover {
     transform: scale(1.07);
     transition: transform 0.5s;
 }
 
 h3 {
-    font-size: 12px;
-}
-
-.book p,
-.book_2 p {
     font-size: 12px;
 }
 
@@ -163,7 +154,7 @@ span {
 /* Banner-area */
 
 .main-content {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
 }
 
@@ -178,7 +169,12 @@ span {
 }
 
 .banner img {
-    width: 500px;
+    width: 100%;
+    transition: transform .3s;
+}
+
+.banner img:hover {
+    transform: scale(1.05);
 }
 
 /* Author-area */
@@ -202,6 +198,13 @@ span {
     color: black;
     font-size: 20px;
     letter-spacing: 2px;
+}
+
+#map iframe {
+    width: 100%;
+    height: 350px;
+    /* Desktop */
+    border: 0;
 }
 
 /* --- Responsivlik --- */
@@ -261,7 +264,8 @@ span {
     }
 
     .container,
-    .container_2 {
+    .container_2,
+    .container_3 {
         max-width: 700px;
         margin: auto;
         margin-top: 40px;
@@ -374,7 +378,8 @@ span {
     }
 
     .container,
-    .container_2 {
+    .container_2,
+    .container_3 {
         max-width: 400px;
         margin: auto;
         margin-top: 40px;
@@ -407,7 +412,7 @@ span {
     }
 
     .author-content img {
-        width: 500px;
+        width: 300px;
     }
 
     .small-banner img {
@@ -468,7 +473,8 @@ span {
     }
 
     .container,
-    .container_2 {
+    .container_2,
+    .container_3 {
         max-width: 210px;
         margin: auto;
         margin-top: 40px;
@@ -480,7 +486,7 @@ span {
     }
 
     .author-content img {
-        width: 250px;
+        width: 200px;
     }
 
     .store-content img {

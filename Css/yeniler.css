@@ -2,8 +2,9 @@
 
 /* slider */
 .container,
-.container_2 {
-    max-width: 1000px;
+.container_2,
+.container_3 {
+    max-width: 1100px;
     margin: auto;
 }
 
@@ -16,8 +17,9 @@
 }
 
 #books-container,
-#books-container_2 {
-    margin-top: 40px;
+#books-container_2,
+#books-container_3 {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
@@ -28,19 +30,26 @@
     text-align: center;
 }
 
+h2 {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
 .book,
-.book_2 {
+.book_2,
+.book_3 {
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: 300px;
     min-height: 450px;
     padding: 10px 10px;
-    box-shadow: 6px 8px 15px 1px rgba(52,73,94,0.86);
+    box-shadow: 6px 8px 15px 1px rgba(52, 73, 94, 0.86);
 }
 
 .book h3,
-.book_2 h3 {
+.book_2 h3,
+.book_3 h3 {
     font-size: 18px;
     min-height: 50px;
     margin-bottom: 0;
@@ -48,12 +57,14 @@
 }
 
 .book span,
-.book_2 span {
+.book_2 span,
+.book_3 span {
     font-weight: 600;
 }
 
 .book p,
-.book_2 p {
+.book_2 p,
+.book_3 p {
     min-height: 40px;
     overflow: hidden;
 }
@@ -62,21 +73,9 @@
     margin-top: auto;
 }
 
-.add-to-cart,
-.goToCart,
-.continueShopping,
-.goToCart2,
-.continueShopping2 {
-    background-color: transparent;
-    border: none;
-    color: #333;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
 .book img,
-.book_2 img {
+.book_2 img,
+.book_3 img {
     display: block;
     margin: auto;
     width: 100%;
@@ -86,7 +85,8 @@
 }
 
 .book img:hover,
-.book_2 img:hover {
+.book_2 img:hover,
+.book_3 img:hover {
     transform: scale(1.03);
     transition: transform 0.5s;
 }
@@ -165,7 +165,8 @@ footer {
         display: block !important;
     }
 
-    nav a , .user-area{
+    nav a,
+    .user-area {
         display: none !important;
     }
 
@@ -205,7 +206,8 @@ footer {
     }
 
     .container,
-    .container_2 {
+    .container_2,
+    .container_3 {
         padding: 0 16px;
     }
 
@@ -253,7 +255,8 @@ footer {
     }
 
     .container,
-    .container_2 {
+    .container_2,
+    .container_3 {
         padding: 0 16px;
     }
 
@@ -268,7 +271,8 @@ footer {
     }
 
     #books-container,
-    #books-container_2 {
+    #books-container_2,
+    #books-container_3 {
         margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -280,7 +284,9 @@ footer {
         text-align: center;
     }
 
-    .book img {
+    .book img,
+    .book_2 img,
+    .book_3 img {
         display: block;
         margin: auto;
         width: 100%;
@@ -288,7 +294,9 @@ footer {
         height: auto;
     }
 
-    .book h3 {
+    .book h3,
+    .book_2 h3,
+    .book_3 h3 {
         margin-top: 10px;
     }
 
@@ -341,7 +349,8 @@ footer {
     }
 
     #books-container,
-    #books-container_2 {
+    #books-container_2,
+    #books-container_3 {
         margin-top: 40px;
         display: flex;
         flex-direction: column;
@@ -350,7 +359,9 @@ footer {
         text-align: center;
     }
 
-    .book img {
+    .book img,
+    .book_2 img,
+    .book_3 img {
         display: block;
         margin: auto;
         width: 100%;
