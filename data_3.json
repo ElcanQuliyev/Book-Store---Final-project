@@ -3,90 +3,105 @@
     "title": "Gecə qurdlarındır",
     "author": "Vulf Dorn",
     "price": 9.0,
-    "image": "./images/gece-qurdlarindir-front-book.webp"
+    "image": "./images/gece-qurdlarindir-front-book.webp",
+    "category": "Detektiv"
   },
   {
     "title": "Dilənçi qadının sirri",
     "author": "Elxan Elatlı",
     "price": 13.0,
-    "image": "./images/sirri.webp"
+    "image": "./images/sirri.webp",
+    "category": "Detektiv"
   },
   {
     "title": "Dünya xalqlarının atalar sözləri",
     "author": "Nizami Gəncəvi",
     "price": 8.0,
-    "image": "./images/https___bbclub.az_assets_img_books_dunya-atalar-sozu.webp"
+    "image": "./images/https___bbclub.az_assets_img_books_dunya-atalar-sozu.webp",
+    "category": "Tarixi"
   },
   {
     "title": "Anna Karenina",
     "author": "Lev Tolstoy",
     "price": 14.5,
-    "image": "./images/1712100_anna-karenina_38690.webp"
+    "image": "./images/1712100_anna-karenina_38690.webp",
+    "category": "Dram"
   },
   {
     "title": "Xudafərin körpüsü",
     "author": "Fərman Kərimzadə",
     "price": 7.5,
-    "image": "./images/XUDAFERIN_KORPUSU_qapaq_07.2025.webp"
+    "image": "./images/XUDAFERIN_KORPUSU_qapaq_07.2025.webp",
+    "category": "Tarixi"
   },
   {
     "title": "Amfibiya adam",
     "author": "Aleksandr Belyayev",
     "price": 10.5,
-    "image": "./images/Belyayev_AMFIBIYA_AZE.webp"
+    "image": "./images/Belyayev_AMFIBIYA_AZE.webp",
+    "category": "Fantastika"
   },
   {
     "title": "Seçilmiş cəza",
     "author": "Elxan Elatlı",
     "price": 9.5,
-    "image": "./images/secilmis-ceza-front-book.webp"
+    "image": "./images/secilmis-ceza-front-book.webp",
+    "category": "Detektiv"
   },
   {
     "title": "Qənimət",
     "author": "Daniel Yergin",
     "price": 15.0,
-    "image": "./images/qenimet-front-book.webp"
+    "image": "./images/qenimet-front-book.webp",
+    "category": "Biznes"
   },
   {
     "title": "Qoca və Dəniz",
     "author": "Ernest Hemingway",
     "price": 11.0,
-    "image": "./images/Qoca_ve_deniz_qapaq_2021_Esas.webp"
+    "image": "./images/Qoca_ve_deniz_qapaq_2021_Esas.webp",
+    "category": "Dram"
   },
   {
     "title": "Dahi",
     "author": "TEODOR DRAYZER",
     "price": 8.5,
-    "image": "./images/dahi-front-book.webp"
+    "image": "./images/dahi-front-book.webp",
+    "category": "Dram"
   },
   {
     "title": "Əsrimizin Siyavuşu",
     "author": "Məhəmməd Əmin Rəsulzadə",
     "price": 9.0,
-    "image": "./images/Məmməd-Əmin-Rəsulzadə-Əsrimizin-Siyavusu.webp"
+    "image": "./images/Məmməd-Əmin-Rəsulzadə-Əsrimizin-Siyavusu.webp",
+    "category": "Tarixi"
   },
   {
     "title": "Ferrarisini satan rahib",
     "author": "Robin Şarma",
     "price": 13.5,
-    "image": "./images/11e32b500583a22a167f4fd387bf56a3.webp"
+    "image": "./images/11e32b500583a22a167f4fd387bf56a3.webp",
+    "category": "Biznes"
   },
   {
     "title": "Mərtəbələr",
     "author": "Elxan Elatlı",
     "price": 10.0,
-    "image": "./images/mertebeler-front-book.webp"
+    "image": "./images/mertebeler-front-book.webp",
+    "category": "Detektiv"
   },
   {
     "title": "Biznesin ruhu Satış",
     "author": "Bilal Hüseynli",
     "price": 7.0,
-    "image": "./images/http___kitabal.az_img_books_1634474.webp"
+    "image": "./images/http___kitabal.az_img_books_1634474.webp",
+    "category": "Biznes"
   },
   {
     "title": "Fahrenheit 451",
     "author": "Ray Bradbury",
     "price": 12.0,
-    "image": "./images/0001750151001-1.webp"
+    "image": "./images/0001750151001-1.webp",
+    "category": "Fantastika"
   }
 ]

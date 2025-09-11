@@ -3,90 +3,105 @@
         "title": "Okkamanın inkarı",
         "author": "Çingiz Abdullayev",
         "price": 9.5,
-        "image": "./images/C.Abdullayev_Okkama_qapaq.webp"
+        "image": "./images/C.Abdullayev_Okkama_qapaq.webp",
+        "category": "Dram"
     },
     {
         "title": "Əli və Nino",
         "author": "Qurban Səid",
         "price": 12.0,
-        "image": "./images/860ce15baaef6db9b2566ad3498c6c7a.webp"
+        "image": "./images/860ce15baaef6db9b2566ad3498c6c7a.webp",
+        "category": "Sevgi"
     },
     {
         "title": "Yüz ilin tənhalığı",
         "author": "Gabriel García Márquez",
         "price": 14.5,
-        "image": "./images/2025-02-04-11-36-381738654598.webp"
+        "image": "./images/2025-02-04-11-36-381738654598.webp",
+        "category": "Dram"
     },
     {
         "title": "Cinayət və Cəza",
         "author": "Fyodor Dostoyevski",
         "price": 13.0,
-        "image": "./images/43ccb52c03c85c71e64c12b4f2f67cb7.webp"
+        "image": "./images/43ccb52c03c85c71e64c12b4f2f67cb7.webp",
+        "category": "Dram"
     },
     {
         "title": "Səfillər",
         "author": "Viktor Hüqo",
         "price": 15.0,
-        "image": "./images/5387fd1b8dd9bd9524cc0177110771a0.webp"
+        "image": "./images/5387fd1b8dd9bd9524cc0177110771a0.webp",
+        "category": "Dram"
     },
     {
         "title": "Alkimyaçı",
         "author": "Paulo Coelho",
         "price": 10.0,
-        "image": "https://m.media-amazon.com/images/I/71aFt4+OTOL.jpg"
+        "image": "https://m.media-amazon.com/images/I/71aFt4+OTOL.jpg",
+        "category": "Fəlsəfi"
     },
     {
         "title": "Xəstə ruhlar",
         "author": "Elxan Elatlı",
         "price": 8.0,
-        "image": "./images/Xeste-ruhlar--uz-qabigi-cover_1559112417.webp"
+        "image": "./images/Xeste-ruhlar--uz-qabigi-cover_1559112417.webp",
+        "category": "Psixoloji"
     },
     {
         "title": "Ulduzlar bəxş edən",
         "author": "Jojo Moyes",
         "price": 11.5,
-        "image": "./images/ULDUZLAR_qapaq.webp"
+        "image": "./images/ULDUZLAR_qapaq.webp",
+        "category": "Sevgi"
     },
     {
         "title": "1984",
         "author": "George Orwell",
         "price": 9.0,
-        "image": "https://m.media-amazon.com/images/I/71kxa1-0mfL.jpg"
+        "image": "https://m.media-amazon.com/images/I/71kxa1-0mfL.jpg",
+        "category": "Fantastika"
     },
     {
         "title": "Sirr",
         "author": "Rhonda Byrne",
         "price": 10.5,
-        "image": "https://m.media-amazon.com/images/I/81fdQIY6ykL.jpg"
+        "image": "https://m.media-amazon.com/images/I/81fdQIY6ykL.jpg",
+        "category": "Fəlsəfi"
     },
     {
         "title": "Qürur və Qərəz",
         "author": "Jane Austen",
         "price": 12.5,
-        "image": "./images/7ec776bc497a8e39f64adaddeb54fbee.webp"
+        "image": "./images/7ec776bc497a8e39f64adaddeb54fbee.webp",
+        "category": "Sevgi"
     },
     {
         "title": "Harry Potter və Filosof Daşı",
         "author": "J.K. Rowling",
         "price": 13.5,
-        "image": "https://m.media-amazon.com/images/I/81iqZ2HHD-L.jpg"
+        "image": "https://m.media-amazon.com/images/I/81iqZ2HHD-L.jpg",
+        "category": "Fantastika"
     },
     {
         "title": "Dönüş anı",
         "author": "Malcolm Gladwell",
         "price": 7.5,
-        "image": "./images/f9008ebd2650a0424313759ac21921ba.webp"
+        "image": "./images/f9008ebd2650a0424313759ac21921ba.webp",
+        "category": "Elmi"
     },
     {
         "title": "Bir dəlixananın ala - yarımçıq hekayəti",
         "author": "Ayfer Tunç",
         "price": 8.5,
-        "image": "./images/2023-10-26-20-47-251698338845.webp"
+        "image": "./images/2023-10-26-20-47-251698338845.webp",
+        "category": "Psixoloji"
     },
     {
         "title": "Rezonans qanunu",
         "author": "Pyer Frank",
         "price": 14.0,
-        "image": "./images/5a352348-2803-4995-afc7-6a0e42b6338f.webp"
+        "image": "./images/5a352348-2803-4995-afc7-6a0e42b6338f.webp",
+        "category": "Fəlsəfi"
     }
 ]
