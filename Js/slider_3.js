@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const bookElement = document.createElement("div");
             bookElement.classList.add("book_3");
+            bookElement.setAttribute("data-category", book.category);
             bookElement.innerHTML = `
                 <img src="${image}" alt="${title}">
                 <h3>${title}</h3>
@@ -73,19 +74,23 @@ document.addEventListener("DOMContentLoaded", () => {
             container_3.appendChild(bookElement);
         });
 
-        // Yalnız main.html-də düymələr işləsin
         if (enableButtons && nextButton_3 && prevButton_3) {
+            prevButton_3.style.display = "none";
             nextButton_3.style.display = "block";
-            prevButton_3.style.display = "block";
 
             nextButton_3.addEventListener("click", () => {
-                container_3.style.scrollBehavior = "smooth";
-                container_3.scrollLeft += 400;
+                container_3.scrollBy({ left: 400, behavior: "smooth" });
             });
 
             prevButton_3.addEventListener("click", () => {
-                container_3.style.scrollBehavior = "smooth";
-                container_3.scrollLeft -= 400;
+                container_3.scrollBy({ left: -400, behavior: "smooth" });
+            });
+
+            container_3.addEventListener("scroll", () => {
+                const maxScrollLeft = container_3.scrollWidth - container_3.clientWidth;
+
+                prevButton_3.style.display = container_3.scrollLeft > 0 ? "block" : "none";
+                nextButton_3.style.display = container_3.scrollLeft >= maxScrollLeft ? "none" : "block";
             });
         }
     }

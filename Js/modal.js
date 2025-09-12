@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const searchInput = document.getElementById("search");
     const productContainer = document.getElementById("books-container");
     const prevButton = document.getElementById("prev");
     const nextButton = document.getElementById("next");
+    const isMainPage = window.location.pathname.includes("main.html");
 
-    const isMainPage = window.location.pathname.includes("main.html"); // ✅ ƏLAVƏ EDİLDİ
-
+    // Modal dəyişənləri
     const modal = document.getElementById("productModal");
     const modalImg = document.getElementById("modalImg");
     const modalTitle = document.getElementById("modalTitle");
@@ -20,46 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageModalAuthor = document.getElementById("imageModalAuthor");
     const closeModal2 = document.querySelector(".close2");
 
-    const notFoundMessage = document.createElement("div");
-    notFoundMessage.textContent = "Belə bir kitab tapılmadı.";
-    notFoundMessage.style.color = "black";
-    notFoundMessage.style.fontSize = "24px";
-    notFoundMessage.style.marginTop = "20px";
-    notFoundMessage.style.display = "none";
-    productContainer.parentElement.appendChild(notFoundMessage);
-
-    searchInput?.addEventListener("input", (e) => {
-        const searchText = e.target.value.toLowerCase();
-        const allProducts = productContainer.querySelectorAll(".book");
-        let found = 0;
-
-        allProducts.forEach(product => {
-            const productName = product.querySelector("h3").textContent.toLowerCase();
-            if (productName.includes(searchText)) {
-                product.style.display = "block";
-                found++;
-            } else {
-                product.style.display = "none";
-            }
-        });
-
-        if (found === 0) {
-            notFoundMessage.style.display = "block";
-            if (isMainPage) {
-                prevButton.style.display = "none";
-                nextButton.style.display = "none";
-            }
-        } else {
-            notFoundMessage.style.display = "none";
-            if (isMainPage) {
-                prevButton.style.display = "block";
-                nextButton.style.display = "block";
-            }
-        }
-    });
-
-    // Add-to-cart modal
+    // Add-to-cart və şəkil klik modal
     document.body.addEventListener("click", (e) => {
+        // Add-to-cart modal
         if (e.target.classList.contains("add-to-cart")) {
             const product = e.target.closest(".book");
             if (product) {
@@ -90,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Modalları bağlama
+    // Modal bağlama düymələri
     closeModal?.addEventListener("click", () => {
         modal.style.display = "none";
     });
@@ -99,15 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
         imageModal.style.display = "none";
     });
 
+    // Modal xaricinə kliklə bağlama
     window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-        if (e.target === imageModal) {
-            imageModal.style.display = "none";
-        }
+        if (e.target === modal) modal.style.display = "none";
+        if (e.target === imageModal) imageModal.style.display = "none";
     });
 
+    // Səbətə yönləndirmə / continue shopping
     goToCart?.addEventListener("click", () => {
         window.location.href = "cart.html";
     });

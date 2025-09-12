@@ -69,13 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const response = await fetch(url);
             const data = await response.json();
-            displayBooks(data);
+            displayBooks(data, isMainPage);
         } catch (error) {
             console.error("Xəta baş verdi:", error);
         }
     }
 
-    function displayBooks(books) {
+    function displayBooks(books, enableButtons) {
         const container = document.getElementById("books-container");
         const nextButton = document.getElementById("next");
         const prevButton = document.getElementById("prev");
@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const bookElement = document.createElement("div");
             bookElement.classList.add("book");
+            bookElement.setAttribute("data-category", book.category);
             bookElement.innerHTML = `
                 <img src="${image}" alt="${title}">
                 <h3>${title}</h3>
@@ -107,21 +108,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
             container.appendChild(bookElement);
         });
+        
+        if (enableButtons && nextButton && prevButton) {
+            prevButton.style.display = "none";
+            nextButton.style.display = "block";
 
-        if (isMainPage) {
-            if (nextButton) {
-                nextButton.addEventListener("click", () => {
-                    container.style.scrollBehavior = "smooth";
-                    container.scrollLeft += 400;
-                });
-            }
+            nextButton.addEventListener("click", () => {
+                container.scrollBy({ left: 400, behavior: "smooth" });
+            });
 
-            if (prevButton) {
-                prevButton.addEventListener("click", () => {
-                    container.style.scrollBehavior = "smooth";
-                    container.scrollLeft -= 400;
-                });
-            }
+            prevButton.addEventListener("click", () => {
+                container.scrollBy({ left: -400, behavior: "smooth" });
+            });
+
+            container.addEventListener("scroll", () => {
+                const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+                prevButton.style.display = container.scrollLeft > 0 ? "block" : "none";
+                nextButton.style.display = container.scrollLeft >= maxScrollLeft ? "none" : "block";
+            });
         }
     }
 

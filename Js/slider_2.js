@@ -4,9 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Səbət göstəricisi
     const cartCount = document.querySelectorAll("#cart-count");
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cartCount.forEach(el => {
-        el.textContent = cart.length;
-    });
+    cartCount.forEach(el => el.textContent = cart.length);
 
     // Modal dəyişənləri
     const modal = document.getElementById("productModal");
@@ -32,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             if (!isMainPage) {
-                // Əgər main.html deyilsə, buttonlar görünməsin
                 if (nextButton_2) nextButton_2.style.display = "none";
                 if (prevButton_2) prevButton_2.style.display = "none";
             }
@@ -60,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const bookElement = document.createElement("div");
             bookElement.classList.add("book_2");
+            bookElement.setAttribute("data-category", book.category);
             bookElement.innerHTML = `
                 <img src="${image}" alt="${title}">
                 <h3>${title}</h3>
@@ -73,19 +71,26 @@ document.addEventListener("DOMContentLoaded", () => {
             container_2.appendChild(bookElement);
         });
 
-        // Yalnız main.html-də düymələr işləsin
         if (enableButtons && nextButton_2 && prevButton_2) {
+            // Başlanğıcda prev gizli
+            prevButton_2.style.display = "none";
             nextButton_2.style.display = "block";
-            prevButton_2.style.display = "block";
 
             nextButton_2.addEventListener("click", () => {
-                container_2.style.scrollBehavior = "smooth";
-                container_2.scrollLeft += 400;
+                container_2.scrollBy({ left: 400, behavior: "smooth" });
             });
 
             prevButton_2.addEventListener("click", () => {
-                container_2.style.scrollBehavior = "smooth";
-                container_2.scrollLeft -= 400;
+                container_2.scrollBy({ left: -400, behavior: "smooth" });
+            });
+
+            // Scroll eventində prev/next düymələri idarə et
+            container_2.addEventListener("scroll", () => {
+                const maxScrollLeft = container_2.scrollWidth - container_2.clientWidth;
+
+                // Əvvəlcə prev gizli olmalıdır
+                prevButton_2.style.display = container_2.scrollLeft > 0 ? "block" : "none";
+                nextButton_2.style.display = container_2.scrollLeft >= maxScrollLeft ? "none" : "block";
             });
         }
     }
@@ -96,9 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cart.push({ image, title, price });
         localStorage.setItem("cart", JSON.stringify(cart));
 
-        document.querySelectorAll("#cart-count").forEach(el => {
-            el.textContent = cart.length;
-        });
+        document.querySelectorAll("#cart-count").forEach(el => el.textContent = cart.length);
 
         // Modal göstər
         modalImg.src = image;

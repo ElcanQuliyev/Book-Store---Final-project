@@ -1,46 +1,55 @@
 document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("search");
-    const productContainer2 = document.getElementById("books-container_2");
-    const prevButton2 = document.getElementById("prev_2");
-    const nextButton2 = document.getElementById("next_2");
+    const checkboxes = document.querySelectorAll(".input-value");
+    const productContainer = document.getElementById("books-container");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
 
-    const isMainPage = window.location.pathname.includes("main.html");
+    const notFoundMessage = document.createElement("div");
+    notFoundMessage.textContent = "Belə bir kitab tapılmadı.";
+    notFoundMessage.style.color = "#34495E";
+    notFoundMessage.style.fontWeight = "700";
+    notFoundMessage.style.fontSize = "24px";
+    notFoundMessage.style.marginTop = "20px";
+    notFoundMessage.style.display = "none";
+    productContainer.parentElement.appendChild(notFoundMessage);
 
-    const notFoundMessage2 = document.createElement("div");
-    notFoundMessage2.textContent = "Belə bir kitab tapılmadı.";
-    notFoundMessage2.style.color = "black";
-    notFoundMessage2.style.fontSize = "24px";
-    notFoundMessage2.style.marginTop = "20px";
-    notFoundMessage2.style.display = "none";
-    productContainer2.parentElement.appendChild(notFoundMessage2);
+    function filterBooks() {
+        const searchText = searchInput?.value.toLowerCase() || "";
+        const selectedCategories = Array.from(checkboxes)
+            .filter(ch => ch.checked)
+            .map(ch => ch.value);
 
-    searchInput?.addEventListener("input", (e) => {
-        const searchText = e.target.value.toLowerCase();
-        const allProducts2 = productContainer2.querySelectorAll(".book_2");
-        let found2 = 0;
+        const allProducts = productContainer.querySelectorAll(".book");
+        let found = 0;
 
-        allProducts2.forEach(product => {
+        allProducts.forEach(product => {
             const productName = product.querySelector("h3").textContent.toLowerCase();
-            if (productName.includes(searchText)) {
+            const productCategory = product.getAttribute("data-category");
+
+            const matchesSearch = productName.includes(searchText);
+            const matchesCategory =
+                selectedCategories.length === 0 || selectedCategories.includes(productCategory);
+
+            if (matchesSearch && matchesCategory) {
                 product.style.display = "block";
-                found2++;
+                found++;
             } else {
                 product.style.display = "none";
             }
         });
 
-        if (found2 === 0) {
-            notFoundMessage2.style.display = "block";
-            if (isMainPage) {
-                prevButton2.style.display = "none";
-                nextButton2.style.display = "none";
-            }
+        if (found === 0) {
+            notFoundMessage.style.display = "block";
+            prevButton.style.display = "none";
+            nextButton.style.display = "none";
         } else {
-            notFoundMessage2.style.display = "none";
-            if (isMainPage) {
-                prevButton2.style.display = "block";
-                nextButton2.style.display = "block";
-            }
+            notFoundMessage.style.display = "none";
+            prevButton.style.display = "none";
+            nextButton.style.display = "block";
         }
-    });
+    }
+
+    searchInput?.addEventListener("input", filterBooks);
+    checkboxes.forEach(ch => ch.addEventListener("change", filterBooks));
 });
