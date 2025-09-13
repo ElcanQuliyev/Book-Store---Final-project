@@ -43,10 +43,20 @@ document.addEventListener("DOMContentLoaded", () => {
             const imgSrc = product.querySelector("img")?.src;
             const title = product.querySelector("h3")?.textContent;
             const author = product.querySelector("p")?.textContent || "";
+            const description = product.querySelector(".description")?.textContent || "Haqqında məlumat yoxdur";
 
             imageModalImg.src = imgSrc;
             imageModalTitle.textContent = title;
             imageModalAuthor.textContent = author;
+
+            // Description üçün h4 yoxdursa yaradılır
+            let descEl = imageModal.querySelector("#imageModalDescription");
+            if (!descEl) {
+                descEl = document.createElement("h4");
+                descEl.id = "imageModalDescription";
+                imageModalAuthor.insertAdjacentElement("afterend", descEl);
+            }
+            descEl.textContent = description;
 
             imageModal.style.display = "flex";
         }

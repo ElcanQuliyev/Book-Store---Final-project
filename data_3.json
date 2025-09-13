@@ -4,104 +4,119 @@
     "author": "Vulf Dorn",
     "price": 9.0,
     "image": "./images/gece-qurdlarindir-front-book.webp",
-    "category": "Detektiv"
+    "category": "Detektiv",
+    "description": "Psixoloji gərginliklə dolu bu roman insanın qorxularını və gizli arzularını açır. Oxucunu son səhifəyədək həyəcan içində saxlayır."
   },
   {
     "title": "Dilənçi qadının sirri",
     "author": "Elxan Elatlı",
     "price": 13.0,
     "image": "./images/sirri.webp",
-    "category": "Detektiv"
+    "category": "Detektiv",
+    "description": "Qarışıq hadisələr fonunda gizli sirrin açılması ilə maraqlı süjet qurulub. Hər addımda oxucunu yeni ipucları qarşılayır."
   },
   {
     "title": "Dünya xalqlarının atalar sözləri",
     "author": "Nizami Gəncəvi",
     "price": 8.0,
     "image": "./images/https___bbclub.az_assets_img_books_dunya-atalar-sozu.webp",
-    "category": "Tarixi"
+    "category": "Tarixi",
+    "description": "Müxtəlif xalqların müdrik kəlamları bir araya gətirilib. Oxucuya zəngin mədəni irs haqqında dərin düşüncə təqdim edir."
   },
   {
     "title": "Anna Karenina",
     "author": "Lev Tolstoy",
     "price": 14.5,
     "image": "./images/1712100_anna-karenina_38690.webp",
-    "category": "Dram"
+    "category": "Dram",
+    "description": "Sevgi, xəyanət və faciənin təsirli hekayəsi. Tolstoyun şah əsərlərindən biridir."
   },
   {
     "title": "Xudafərin körpüsü",
     "author": "Fərman Kərimzadə",
     "price": 7.5,
     "image": "./images/XUDAFERIN_KORPUSU_qapaq_07.2025.webp",
-    "category": "Tarixi"
+    "category": "Tarixi",
+    "description": "Azərbaycan tarixindən və xalq yaddaşından bəhs edən əsərdir. Tarixi motivlərlə zəngin olan roman oxucunu düşündürür."
   },
   {
     "title": "Amfibiya adam",
     "author": "Aleksandr Belyayev",
     "price": 10.5,
     "image": "./images/Belyayev_AMFIBIYA_AZE.webp",
-    "category": "Fantastika"
+    "category": "Fantastika",
+    "description": "Dəniz altında yaşaya bilən qəribə qəhrəmanın hekayəsi. Elmi-fantastik ədəbiyyatın klassik nümunələrindəndir."
   },
   {
     "title": "Seçilmiş cəza",
     "author": "Elxan Elatlı",
     "price": 9.5,
     "image": "./images/secilmis-ceza-front-book.webp",
-    "category": "Detektiv"
+    "category": "Detektiv",
+    "description": "Mürəkkəb cinayət hadisəsinin araşdırılması ilə maraqlı süjet qurulub. Oxucunu daim gərginlikdə saxlayır."
   },
   {
     "title": "Qənimət",
     "author": "Daniel Yergin",
     "price": 15.0,
     "image": "./images/qenimet-front-book.webp",
-    "category": "Biznes"
+    "category": "Biznes",
+    "description": "Neft sənayesinin tarixi və dünyaya təsiri ətraflı təsvir olunur. Qlobal iqtisadiyyatın inkişafını anlamaq üçün mühüm əsərdir."
   },
   {
     "title": "Qoca və Dəniz",
     "author": "Ernest Hemingway",
     "price": 11.0,
     "image": "./images/Qoca_ve_deniz_qapaq_2021_Esas.webp",
-    "category": "Dram"
+    "category": "Dram",
+    "description": "Qoca balıqçının mübarizəsi həyatın mənasını göstərir. Sadə, amma güclü mesajlarla dolu əsərdir."
   },
   {
     "title": "Dahi",
     "author": "TEODOR DRAYZER",
     "price": 8.5,
     "image": "./images/dahi-front-book.webp",
-    "category": "Dram"
+    "category": "Dram",
+    "description": "İstedad, şöhrət və həyatın çətinlikləri üzərində qurulan hekayədir. Cəmiyyət və insan arasındakı ziddiyyətləri açır."
   },
   {
     "title": "Əsrimizin Siyavuşu",
     "author": "Məhəmməd Əmin Rəsulzadə",
     "price": 9.0,
     "image": "./images/Məmməd-Əmin-Rəsulzadə-Əsrimizin-Siyavusu.webp",
-    "category": "Tarixi"
+    "category": "Tarixi",
+    "description": "Azərbaycan milli kimliyinin simvolik əsərlərindən biridir. Mübarizə və azadlıq ideyalarını əks etdirir."
   },
   {
     "title": "Ferrarisini satan rahib",
     "author": "Robin Şarma",
     "price": 13.5,
     "image": "./images/11e32b500583a22a167f4fd387bf56a3.webp",
-    "category": "Biznes"
+    "category": "Biznes",
+    "description": "Həyat balansı və şəxsi inkişaf barədə motivasiyaedici hekayədir. Oxucunu daxili gücünü tapmağa çağırır."
   },
   {
     "title": "Mərtəbələr",
     "author": "Elxan Elatlı",
     "price": 10.0,
     "image": "./images/mertebeler-front-book.webp",
-    "category": "Detektiv"
+    "category": "Detektiv",
+    "description": "Hadisələr mərtəbə-mərtəbə açılır və sirr tədricən üzə çıxır. Gərgin detektiv romanıdır."
   },
   {
     "title": "Biznesin ruhu Satış",
     "author": "Bilal Hüseynli",
     "price": 7.0,
     "image": "./images/http___kitabal.az_img_books_1634474.webp",
-    "category": "Biznes"
+    "category": "Biznes",
+    "description": "Satış sənətinin əsas prinsipləri izah olunur. Praktik nümunələrlə zəngin motivasiya kitabıdır."
   },
   {
     "title": "Fahrenheit 451",
     "author": "Ray Bradbury",
     "price": 12.0,
     "image": "./images/0001750151001-1.webp",
-    "category": "Fantastika"
+    "category": "Fantastika",
+    "description": "Oxumağın qadağan olunduğu gələcək cəmiyyətin hekayəsi. Azad düşüncə və senzura mövzularına toxunur."
   }
 ]

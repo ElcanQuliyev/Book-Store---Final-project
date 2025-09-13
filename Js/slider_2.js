@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h3>${title}</h3>
                 <p><strong>Müəllif:</strong> ${author}</p>
                 <span>${price}</span>
+                <h4 class="description" style="display:none;">${book.description || "Haqqında məlumat yoxdur"}</h4>
                 <button class="add-to-cart" onclick="addToCart('${image}', '${title}', '${book.price}')">
                     Səbətə əlavə et <i class="fa-solid fa-basket-shopping"></i>
                 </button>
@@ -117,10 +118,19 @@ document.addEventListener("DOMContentLoaded", () => {
             const imgSrc = product.querySelector("img")?.src;
             const title = product.querySelector("h3")?.textContent;
             const author = product.querySelector("p")?.textContent || "";
+            const description = product.querySelector(".description")?.textContent || "Haqqında məlumat yoxdur";
 
             imageModalImg.src = imgSrc;
             imageModalTitle.textContent = title;
             imageModalAuthor.textContent = author;
+
+            let descEl = imageModal.querySelector("#imageModalDescription");
+            if (!descEl) {
+                descEl = document.createElement("h4");
+                descEl.id = "imageModalDescription";
+                imageModalAuthor.insertAdjacentElement("afterend", descEl);
+            }
+            descEl.textContent = description;
 
             imageModal.style.display = "flex";
         }

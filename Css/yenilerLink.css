@@ -118,6 +118,10 @@
     word-break: break-word;
 }
 
+.modalItems h4 {
+    font-size: 16px;
+}
+
 .modalItems p {
     font-size: 16px;
     color: #555;

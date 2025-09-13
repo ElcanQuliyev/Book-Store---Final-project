@@ -101,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h3>${title}</h3>
                 <p><strong>Müəllif:</strong> ${author}</p>
                 <span>${price}</span>
+                <h4 class="description" style="display:none;">${book.description || "Haqqında məlumat yoxdur"}</h4>
                 <button class="add-to-cart" onclick="addToCart('${image}', '${title}', '${book.price}')">
                     Səbətə əlavə et <i class="fa-solid fa-basket-shopping"></i>
                 </button>

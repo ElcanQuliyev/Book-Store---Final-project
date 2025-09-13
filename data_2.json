@@ -4,104 +4,119 @@
         "author": "Mirzə Adıgözəl bəy",
         "price": 11.0,
         "image": "./images/QARABAGNAMƏLƏR-600x903.jpg",
-        "category": "Tarixi"
+        "category": "Tarixi",
+        "description": "Mirzə Adıgözəl bəyin əsəri Qarabağın tarixi hadisələrini və mühüm şəxsiyyətlərini əks etdirir. Kitab bölgənin mədəniyyətini və ənənələrini gələcək nəsillərə çatdırır."
     },
     {
         "title": "Məsumlar",
         "author": "Burhan Sönmez",
         "price": 5.5,
         "image": "./images/mesumlar.jpg",
-        "category": "Dram"
+        "category": "Dram",
+        "description": "Burhan Sönmezin romanı insanın həyatdakı məsumiyyətini və itkilərini ön plana çıxarır. Əsərdə emosional dərinlik və dramatik hadisələr oxucunu düşündürür."
     },
     {
         "title": "Mələk",
         "author": "Qaraqan",
         "price": 13.0,
         "image": "images/Melek_qapaq__1_.webp",
-        "category": "Dram"
+        "category": "Dram",
+        "description": "Qaraqanın məşhur əsərində gəncliyin çətinlikləri və həyati dilemması təsvir olunur. Əsər emosional sarsıntılar və insanın daxili mübarizəsini əks etdirir."
     },
     {
         "title": "The Innocence of Memories",
         "author": "Orhan Pamuk",
         "price": 12.5,
         "image": "./images/Orhan pamuk.webp",
-        "category": "Dram"
+        "category": "Dram",
+        "description": "Orhan Pamukun əsəri xatirələrin gücünü və onların insan həyatına təsirini göstərir. Əsərdə sevgi, itki və yaddaş mövzuları incə bir dillə işlənir."
     },
     {
         "title": "Paris ve Londrada Beş Parasız",
         "author": "George Orwell",
         "price": 10.0,
         "image": "./images/george orvel.webp",
-        "category": "Dram"
+        "category": "Dram",
+        "description": "George Orwellin avtobioqrafik əsərində yoxsulluq və sosial ədalətsizlik mövzuları işlənir. Əsər həm həyat mübarizəsini, həm də insanın dözümlülüyünü önə çıxarır."
     },
     {
         "title": "Uzaqdan gələn yağış",
         "author": "Varis",
         "price": 11.5,
         "image": "./images/Varis_01.webp",
-        "category": "Dram"
+        "category": "Dram",
+        "description": "Varisin romanı insanların həyatındakı gözlənilməz dəyişiklikləri və münasibətlərin mürəkkəbliyini təsvir edir. Əsər emosional hadisələrlə oxucunu cəlb edir."
     },
     {
         "title": "Milyonçu zəkasının sirləri",
         "author": "T.Harv Eker",
         "price": 8.0,
         "image": "./images/MILYONCU_ZEKASININ_SIRLERI_qapaq.webp",
-        "category": "İnkişaf"
+        "category": "İnkişaf",
+        "description": "T. Harv Eker maliyyə uğurunun əsas düşüncə prinsiplərini oxucuya təqdim edir. Kitab şəxsi inkişaf və zənginlik psixologiyası barədə praktik məsləhətlər verir."
     },
     {
         "title": "Əsrarəngiz bağ",
         "author": "Frances Hodgson Burnett",
         "price": 9.0,
         "image": "https://m.media-amazon.com/images/I/81gTwYAhU7L.jpg",
-        "category": "Uşaq"
+        "category": "Uşaq",
+        "description": "Frances Hodgson Burnettin klassik uşaq romanında gizli bir bağ uşaqların həyatını dəyişir. Əsər dostluq, ümid və sevgi kimi dəyərləri vurğulayır."
     },
     {
         "title": "Mobius",
         "author": "Adam Fawer",
         "price": 14.0,
         "image": "./images/adam fawer.webp",
-        "category": "Fantastika"
+        "category": "Fantastika",
+        "description": "Adam Fawerin romanı elmi-fantastik üslubda zaman və taleyin qarşılıqlı əlaqəsini araşdırır. Əsər maraqlı süjet və intellektual tapmacalarla zəngindir."
     },
     {
         "title": "Evlilik və əxlaq",
         "author": "Bertrand Russell",
         "price": 13.0,
         "image": "./images/Bertran_Rassel_Evlilik_qapaq_Esas.webp",
-        "category": "Fəlsəfi"
+        "category": "Fəlsəfi",
+        "description": "Bertrand Russellin əsəri evlilik institutuna və əxlaqi dəyərlərə fəlsəfi yanaşma təqdim edir. Əsər oxucunu cəmiyyətin ənənəvi qaydaları barədə düşünməyə sövq edir."
     },
     {
         "title": "Balaca Şahzadə",
         "author": "Antoine de Saint-Exupéry",
         "price": 6.5,
         "image": "./images/balaca sahzade.webp",
-        "category": "Uşaq"
+        "category": "Uşaq",
+        "description": "Antoine de Saint-Exupéryn məşhur əsəri sadə, lakin dərin mənalı hekayəsi ilə bütün yaş qruplarını cəlb edir. Balaca Şahzadənin səyahəti sevgi, dostluq və insanlıq dərsləri ilə doludur."
     },
     {
         "title": "Milenaya Məktublar",
         "author": "Franz Kafka",
         "price": 8.5,
         "image": "./images/Kafka-Milena-Kapak-Esas-1.webp",
-        "category": "Psixoloji"
+        "category": "Psixoloji",
+        "description": "Franz Kafkanın şəxsi məktubları onun daxili dünyasını və emosional sarsıntılarını üzə çıxarır. Əsər müəllifin sevgi və tənhalıqla bağlı hisslərini açıq şəkildə göstərir."
     },
     {
         "title": "Nizami Gəncəvi Divanı",
         "author": "Nizami Gəncəvi",
         "price": 15.0,
         "image": "./images/Nizami_Gəncəvi-_Azərbaycanca_yazdığı_divan.webp",
-        "category": "Tarixi"
+        "category": "Tarixi",
+        "description": "Nizami Gəncəvinin divanı Azərbaycan klassik poeziyasının zirvələrindən biridir. Əsərdə sevgi, hikmət və insanlıq dəyərləri yüksək poetik üslubla təqdim olunur."
     },
     {
         "title": "Qəzəllər (Əliağa Vahid)",
         "author": "Əliağa Vahid",
         "price": 12.0,
         "image": "./images/Esas_Eliaga_Vahid_Kapak_2020.webp",
-        "category": "Tarixi"
+        "category": "Tarixi",
+        "description": "Əliağa Vahidin qəzəlləri klassik üslubu müasir duyğularla birləşdirir. Onun şeirlərində məhəbbət, kədər və həyat fəlsəfəsi incəliklə əks olunur."
     },
     {
         "title": "Zəvvarlıq",
         "author": "Paulo Koelyo",
         "price": 5.0,
         "image": "./images/ZEVVARLIQ_qapaq.webp",
-        "category": "İnkişaf"
+        "category": "İnkişaf",
+        "description": "Paulo Koelyonun bu əsəri müəllifin şəxsi səyahət təcrübəsinə əsaslanır. Kitab həyat yolunda daxili gücün və ruhani axtarışın əhəmiyyətini vurğulayır."
     }
 ]

@@ -4,104 +4,119 @@
         "author": "Çingiz Abdullayev",
         "price": 9.5,
         "image": "./images/C.Abdullayev_Okkama_qapaq.webp",
-        "category": "Dram"
+        "category": "Dram",
+        "description": "Çingiz Abdullayevin detektiv romanında sirli cinayətlər və gözlənilməz hadisələr oxucunu daim gərgin saxlayır. Əsərdə məntiq və intellektual mübarizə əsas yer tutur."
     },
     {
         "title": "Əli və Nino",
         "author": "Qurban Səid",
         "price": 12.0,
         "image": "./images/860ce15baaef6db9b2566ad3498c6c7a.webp",
-        "category": "Sevgi"
+        "category": "Sevgi",
+        "description": "Qurban Səidin klassik əsəri Şərqlə Qərbin qovuşmasında yaşanan böyük bir sevgi hekayəsini danışır. Əsərdə həm romantika, həm də tarixi-siyasi hadisələr bir araya gəlir."
     },
     {
         "title": "Yüz ilin tənhalığı",
         "author": "Gabriel García Márquez",
         "price": 14.5,
         "image": "./images/2025-02-04-11-36-381738654598.webp",
-        "category": "Dram"
+        "category": "Dram",
+        "description": "Gabriel García Márquezin şah əsəri Buendía ailəsinin bir neçə nəsillik hekayəsini magik realizm üslubunda təqdim edir. Əsər insan tənhalığı və taleyin qaçılmazlığı mövzularını vurğulayır."
     },
     {
         "title": "Cinayət və Cəza",
         "author": "Fyodor Dostoyevski",
         "price": 13.0,
         "image": "./images/43ccb52c03c85c71e64c12b4f2f67cb7.webp",
-        "category": "Dram"
+        "category": "Dram",
+        "description": "Dostoyevskinin şah əsərində Rodion Raskolnikovun vicdan əzabı və psixoloji sarsıntıları təsvir olunur. Əsər insanın mənəvi mübarizəsini dərindən araşdırır."
     },
     {
         "title": "Səfillər",
         "author": "Viktor Hüqo",
         "price": 15.0,
         "image": "./images/5387fd1b8dd9bd9524cc0177110771a0.webp",
-        "category": "Dram"
+        "category": "Dram",
+        "description": "Viktor Hüqonun monumental əsəri cəmiyyətin ədalətsizliklərinə qarşı mübarizə aparan insanların hekayəsini təqdim edir. Əsərdə sevgi, ümid və qurtuluş əsas mövzulardır."
     },
     {
         "title": "Alkimyaçı",
         "author": "Paulo Coelho",
         "price": 10.0,
         "image": "https://m.media-amazon.com/images/I/71aFt4+OTOL.jpg",
-        "category": "Fəlsəfi"
+        "category": "Fəlsəfi",
+        "description": "Paulo Coelhonun məşhur romanı öz arzularının ardınca gedən çoban Santyaqonun səyahətini danışır. Əsər oxucunu taleyə inanmağa və daxili gücünü kəşf etməyə çağırır."
     },
     {
         "title": "Xəstə ruhlar",
         "author": "Elxan Elatlı",
         "price": 8.0,
         "image": "./images/Xeste-ruhlar--uz-qabigi-cover_1559112417.webp",
-        "category": "Psixoloji"
+        "category": "Psixoloji",
+        "description": "Elxan Elatlının əsərində insan psixologiyasının dərin qatlarına toxunulur. Hadisələr gerilim dolu məqamlarla oxucunu daim maraqda saxlayır."
     },
     {
         "title": "Ulduzlar bəxş edən",
         "author": "Jojo Moyes",
         "price": 11.5,
         "image": "./images/ULDUZLAR_qapaq.webp",
-        "category": "Sevgi"
+        "category": "Sevgi",
+        "description": "Jojo Moyesin romanında bir qrup qadının kitabxana vasitəsilə həyatları dəyişir. Əsər dostluq, sevgi və güclü qadın obrazlarını ön plana çıxarır."
     },
     {
         "title": "1984",
         "author": "George Orwell",
         "price": 9.0,
         "image": "https://m.media-amazon.com/images/I/71kxa1-0mfL.jpg",
-        "category": "Fantastika"
+        "category": "Fantastika",
+        "description": "George Orwellin distopik əsəri totalitar rejimin insan azadlıqlarını necə məhdudlaşdırdığını göstərir. Əsər həm siyasi, həm də fəlsəfi baxımdan dərin mesajlar daşıyır."
     },
     {
         "title": "Sirr",
         "author": "Rhonda Byrne",
         "price": 10.5,
         "image": "https://m.media-amazon.com/images/I/81fdQIY6ykL.jpg",
-        "category": "Fəlsəfi"
+        "category": "Fəlsəfi",
+        "description": "Rhonda Byrne pozitiv düşüncənin gücünü və 'cazibə qanunu'nu oxuculara təqdim edir. Kitab şəxsi inkişaf və motivasiya üçün geniş yayılmış bir bələdçidir."
     },
     {
         "title": "Qürur və Qərəz",
         "author": "Jane Austen",
         "price": 12.5,
         "image": "./images/7ec776bc497a8e39f64adaddeb54fbee.webp",
-        "category": "Sevgi"
+        "category": "Sevgi",
+        "description": "Jane Austenin klassik romanı sevgi, ailə və sosial münasibətləri incə bir üslubla təsvir edir. Əsər insan xarakterinin güclü və zəif tərəflərini ustalıqla açır."
     },
     {
         "title": "Harry Potter və Filosof Daşı",
         "author": "J.K. Rowling",
         "price": 13.5,
         "image": "https://m.media-amazon.com/images/I/81iqZ2HHD-L.jpg",
-        "category": "Fantastika"
+        "category": "Fantastika",
+        "description": "J.K. Rowlingin məşhur seriyasının ilk kitabı Harry Potterin sehrbazlıq dünyasına addımını danışır. Əsərdə macəra, dostluq və sehr bir araya gəlir."
     },
     {
         "title": "Dönüş anı",
         "author": "Malcolm Gladwell",
         "price": 7.5,
         "image": "./images/f9008ebd2650a0424313759ac21921ba.webp",
-        "category": "Elmi"
+        "category": "Elmi",
+        "description": "Malcolm Gladwell kiçik dəyişikliklərin böyük nəticələrə gətirib çıxardığını göstərir. Əsər sosial davranış və uğurun mexanizmlərini sadə dillə izah edir."
     },
     {
         "title": "Bir dəlixananın ala - yarımçıq hekayəti",
         "author": "Ayfer Tunç",
         "price": 8.5,
         "image": "./images/2023-10-26-20-47-251698338845.webp",
-        "category": "Psixoloji"
+        "category": "Psixoloji",
+        "description": "Ayfer Tunçun əsəri cəmiyyətin görünməyən tərəflərini və insan psixologiyasının incəliklərini işıqlandırır. Əsərdə dramatik hadisələr insan talelərinə güzgü tutur."
     },
     {
         "title": "Rezonans qanunu",
         "author": "Pyer Frank",
         "price": 14.0,
         "image": "./images/5a352348-2803-4995-afc7-6a0e42b6338f.webp",
-        "category": "Fəlsəfi"
+        "category": "Fəlsəfi",
+        "description": "Pyer Frank müsbət düşüncənin həyatımıza necə təsir etdiyini açıqlayır. Kitab oxucunu öz enerjisi ilə uyğun rezonansa girərək arzularını reallaşdırmağa təşviq edir."
     }
 ]

@@ -54,6 +54,10 @@
     line-height: 1.4;
 }
 
+.modalItems h4 {
+    font-size: 16px;
+}
+
 /* Müəllif və qiymət */
 .modalItems p {
     font-size: 16px;
