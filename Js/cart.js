@@ -22,20 +22,28 @@ document.addEventListener("DOMContentLoaded", () => {
             const cartItem = document.createElement("div");
             cartItem.classList.add("cart-item");
 
-            let price = 0;
-            if (typeof item.price === "string") {
-                price = parseFloat(item.price.toString().replace(/[^\d.]/g, ""));
-            } else {
-                price = item.price;
-            }
-            total += price;
+            // Qiyməti number şəklinə sal
+            let price = typeof item.price === "string" ? parseFloat(item.price.replace(/[^\d.]/g, "")) : item.price;
+
+            // Əgər quantity yoxdursa 1 qoy
+            if (!item.quantity) item.quantity = 1;
+
+            total += price * item.quantity;
 
             cartItem.innerHTML = `
                 <img src="${item.image}" alt="${item.title}">
                 <p>${item.title} - ${price.toFixed(2)} AZN</p>
+
+                <div class="counter-container">
+                    <button class="counter-button decrease">-</button>
+                    <input type="number" class="counter-display" value="${item.quantity}" readonly>
+                    <button class="counter-button increase">+</button>
+                </div>
+
                 <button class="remove-btn">❌ Sil</button>
             `;
 
+            // Sil düyməsi
             const removeBtn = cartItem.querySelector(".remove-btn");
             removeBtn.addEventListener("click", () => {
                 cart.splice(index, 1);
@@ -43,39 +51,67 @@ document.addEventListener("DOMContentLoaded", () => {
                 updateCart();
             });
 
+            // "+" düyməsi
+            const increaseBtn = cartItem.querySelector(".increase");
+            const counterDisplay = cartItem.querySelector(".counter-display");
+            increaseBtn.addEventListener("click", () => {
+                item.quantity += 1;
+                counterDisplay.value = item.quantity;
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCart();
+            });
+
+            // "-" düyməsi (minimum 1)
+            const decreaseBtn = cartItem.querySelector(".decrease");
+            decreaseBtn.addEventListener("click", () => {
+                if (item.quantity > 1) {
+                    item.quantity -= 1;
+                    counterDisplay.value = item.quantity;
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    updateCart();
+                }
+            });
+
             cartList.appendChild(cartItem);
         });
 
         totalPrice.textContent = total.toFixed(2);
+        updateCartCount();
     }
 
+    // Cart count yeniləmək
+    function updateCartCount() {
+        const cartCountElements = document.querySelectorAll("#cart-count");
+        let count = cart.reduce((sum, item) => sum + item.quantity, 0);
+        cartCountElements.forEach(el => el.textContent = count);
+    }
+
+    // Səbəti təmizləmək
     clearCartBtn.addEventListener("click", () => {
-        localStorage.removeItem("cart");
         cart = [];
+        localStorage.removeItem("cart");
         updateCart();
     });
 
+    // Səbəti təsdiqləmək
     verifyCartBtn.addEventListener("click", () => {
         if (cart.length === 0) {
             alert("Səbət boşdur. Sifarişi təsdiqləmək üçün məhsul əlavə edin.");
             return;
         }
 
-        // Popup siyahısını təmizlə
         popupBooks.innerHTML = "";
 
-        // Səbətdəki bütün kitabları popup-a əlavə et
         cart.forEach(item => {
             const bookDiv = document.createElement("div");
             bookDiv.classList.add("book");
             bookDiv.innerHTML = `
                 <img src="${item.image}" alt="${item.title}">
-                <p>${item.title}</p>
+                <p>${item.title} x ${item.quantity}</p>
             `;
             popupBooks.appendChild(bookDiv);
         });
 
-        // Popup göstər
         orderPopup.style.display = "flex";
     });
 
@@ -85,8 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     popupOk.addEventListener("click", () => {
         orderPopup.style.display = "none";
-        localStorage.removeItem("cart");
         cart = [];
+        localStorage.removeItem("cart");
         updateCart();
     });
 });

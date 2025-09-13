@@ -64,6 +64,38 @@ a {
     text-align: center;
 }
 
+.counter-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.counter-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+.counter-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.counter-display {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
 #cart-count {
     font-size: 18px;
 }
@@ -214,7 +246,7 @@ h1 {
 
 .cart-item img {
     width: 180px;
-    height: 250px;
+    height: 230px;
     border-radius: 8px;
 }
 
@@ -231,7 +263,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     width: 250px;
-    height: 430px;
+    height: 480px;
     gap: 8px;
     padding: 15px 10px;
     box-shadow: 6px 8px 15px 1px rgba(52, 73, 94, 0.86);
