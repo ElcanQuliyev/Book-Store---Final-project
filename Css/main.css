@@ -89,6 +89,7 @@ h3,
 .book_2 span,
 .book_3 p,
 .book_3 span {
+    font-weight: 600;
     display: block;
     text-align: center;
     max-width: 140px;
@@ -115,15 +116,6 @@ h3,
 .book_3 img:hover {
     transform: scale(1.07);
     transition: transform 0.5s;
-}
-
-h3 {
-    font-size: 12px;
-}
-
-span {
-    font-size: 10px;
-    font-weight: 700;
 }
 
 /* Banner-area */
