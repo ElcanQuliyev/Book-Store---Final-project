@@ -2,17 +2,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("search");
     const checkboxes = document.querySelectorAll(".input-value");
     const productContainer = document.getElementById("books-container");
+
     const prevButton = document.getElementById("prev");
     const nextButton = document.getElementById("next");
 
-    const notFoundMessage = document.createElement("div");
-    notFoundMessage.textContent = "Belə bir kitab tapılmadı.";
-    notFoundMessage.style.color = "#34495E";
-    notFoundMessage.style.fontWeight = "700";
-    notFoundMessage.style.fontSize = "24px";
-    notFoundMessage.style.marginTop = "20px";
-    notFoundMessage.style.display = "none";
-    productContainer.parentElement.appendChild(notFoundMessage);
+    // Buttonları tamamilə gizlə
+    if (prevButton) prevButton.style.display = "none";
+    if (nextButton) nextButton.style.display = "none";
+
+    // NotFound mesajını yalnız bir dəfə yarat
+    let notFoundMessage = productContainer.parentElement.querySelector(".not-found");
+    if (!notFoundMessage) {
+        notFoundMessage = document.createElement("div");
+        notFoundMessage.classList.add("not-found");
+        notFoundMessage.textContent = "Belə bir kitab tapılmadı.";
+        notFoundMessage.style.color = "#34495E";
+        notFoundMessage.style.fontWeight = "700";
+        notFoundMessage.style.fontSize = "24px";
+        notFoundMessage.style.marginTop = "20px";
+        notFoundMessage.style.display = "none";
+        productContainer.parentElement.appendChild(notFoundMessage);
+    }
 
     function filterBooks() {
         const searchText = searchInput?.value.toLowerCase() || "";
@@ -39,17 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        if (found === 0) {
-            notFoundMessage.style.display = "block";
-            prevButton.style.display = "none";
-            nextButton.style.display = "none";
-        } else {
-            notFoundMessage.style.display = "none";
-            prevButton.style.display = "none";
-            nextButton.style.display = "block";
-        }
+        // Yalnız notFound mesajını göstər, buttonlara toxunma
+        notFoundMessage.style.display = found === 0 ? "block" : "none";
     }
 
+    // Event-lər
     searchInput?.addEventListener("input", filterBooks);
     checkboxes.forEach(ch => ch.addEventListener("change", filterBooks));
 });

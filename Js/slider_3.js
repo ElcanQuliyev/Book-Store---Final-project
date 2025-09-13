@@ -79,11 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
             nextButton_3.style.display = "block";
 
             nextButton_3.addEventListener("click", () => {
-                container_3.scrollBy({ left: 400, behavior: "smooth" });
+                container_3.scrollBy({ left: 200, behavior: "smooth" });
             });
 
             prevButton_3.addEventListener("click", () => {
-                container_3.scrollBy({ left: -400, behavior: "smooth" });
+                container_3.scrollBy({ left: -200, behavior: "smooth" });
             });
 
             container_3.addEventListener("scroll", () => {

@@ -21,8 +21,8 @@
 #books-container_3 {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
     gap: 20px;
     align-items: stretch;
     justify-content: center;
@@ -40,19 +40,18 @@ h2 {
 .book_3 {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    width: 300px;
-    min-height: 450px;
-    padding: 10px 10px;
+    width: 250px;
+    height: 430px;
+    gap: 8px;
+    padding: 15px 10px;
     box-shadow: 6px 8px 15px 1px rgba(52, 73, 94, 0.86);
 }
 
 .book h3,
 .book_2 h3,
 .book_3 h3 {
-    font-size: 18px;
-    min-height: 50px;
-    margin-bottom: 0;
+    font-size: 15px;
+    margin: 0;
     overflow: hidden;
 }
 
@@ -65,8 +64,8 @@ h2 {
 .book p,
 .book_2 p,
 .book_3 p {
-    min-height: 40px;
     overflow: hidden;
+    font-size: 14px;
 }
 
 .book button {
@@ -80,7 +79,7 @@ h2 {
     margin: auto;
     width: 100%;
     max-width: 170px;
-    height: 270px !important;
+    height: 230px;
     cursor: pointer;
 }
 
@@ -91,22 +90,13 @@ h2 {
     transition: transform 0.5s;
 }
 
-.book button:hover {
-    color: #FFA500;
-}
-
 .store-logo {
     max-width: 1000px;
     margin: auto;
 }
 
-button:hover {
-    color: #FFA500;
-    transition: color 0.6s ease;
-}
-
 .contact {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -205,6 +195,36 @@ footer {
         margin-bottom: 10px;
     }
 
+    .filter {
+        gap: 25px !important;
+    }
+
+    #books-container,
+    #books-container_2,
+    #books-container_3 {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 20px;
+        align-items: stretch;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .book,
+    .book_2,
+    .book_3 {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 430px;
+        gap: 8px;
+        padding: 15px 10px;
+        box-shadow: 6px 8px 15px 1px rgba(52, 73, 94, 0.86);
+    }
+
     .container,
     .container_2,
     .container_3 {
@@ -265,11 +285,6 @@ footer {
         height: auto;
     }
 
-    .book {
-        width: 100%;
-        gap: 10px;
-    }
-
     #books-container,
     #books-container_2,
     #books-container_3 {
@@ -287,17 +302,19 @@ footer {
     .book img,
     .book_2 img,
     .book_3 img {
-        display: block;
-        margin: auto;
         width: 100%;
-        max-width: 180px;
-        height: auto;
+        max-width: 170px;
+        height: 230px;
     }
 
-    .book h3,
-    .book_2 h3,
-    .book_3 h3 {
-        margin-top: 10px;
+    .filter {
+        display: grid !important;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, auto);
+        gap: 15px !important;
+        align-items: stretch;
+        justify-content: center;
+        align-items: center;
     }
 
     .contact {
@@ -332,7 +349,19 @@ footer {
         font-weight: 600;
     }
 
-    .modal-content,
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 95%;
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        justify-content: space-between;
+        position: relative;
+    }
+
     .modal-content3 {
         width: 95%;
     }
@@ -344,8 +373,21 @@ footer {
     }
 
     #modalImg2 {
-        width: 260px;
-        height: 180px;
+        width: 300px !important;
+        height: 180px !important;
+    }
+
+    .modal-content3 {
+        width: 400px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center !important;
+        gap: 40px;
+    }
+
+    #modalTitle2 {
+        margin-bottom: 12px;
     }
 
     #books-container,
@@ -362,11 +404,29 @@ footer {
     .book img,
     .book_2 img,
     .book_3 img {
-        display: block;
-        margin: auto;
         width: 100%;
-        max-width: 160px;
-        height: auto;
+        max-width: 170px;
+        height: 230px;
+    }
+
+    .filter {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 10px !important;
+        align-items: stretch;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .store-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .store-content p {
+        font-size: 20px;
     }
 
     .contact {

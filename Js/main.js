@@ -114,11 +114,11 @@ document.addEventListener("DOMContentLoaded", () => {
             nextButton.style.display = "block";
 
             nextButton.addEventListener("click", () => {
-                container.scrollBy({ left: 400, behavior: "smooth" });
+                container.scrollBy({ left: 200, behavior: "smooth" });
             });
 
             prevButton.addEventListener("click", () => {
-                container.scrollBy({ left: -400, behavior: "smooth" });
+                container.scrollBy({ left: -200, behavior: "smooth" });
             });
 
             container.addEventListener("scroll", () => {

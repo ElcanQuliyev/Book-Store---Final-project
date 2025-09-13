@@ -77,11 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
             nextButton_2.style.display = "block";
 
             nextButton_2.addEventListener("click", () => {
-                container_2.scrollBy({ left: 400, behavior: "smooth" });
+                container_2.scrollBy({ left: 200, behavior: "smooth" });
             });
 
             prevButton_2.addEventListener("click", () => {
-                container_2.scrollBy({ left: -400, behavior: "smooth" });
+                container_2.scrollBy({ left: -200, behavior: "smooth" });
             });
 
             // Scroll eventində prev/next düymələri idarə et

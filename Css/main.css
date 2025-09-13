@@ -72,28 +72,14 @@ h2 {
 .book_2,
 .book_3 {
     width: 190px;
-    /* Eyni genişlik */
-    height: 390px;
-    /* Eyni hündürlük */
+    height: 410px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    /* Elementlər arasında düzgün məsafə saxlayır */
     padding: 10px;
     border-radius: 8px;
     text-align: center;
-}
-
-.book p,
-.book_2 p,
-.book_3 p,
-.book span,
-.book_2 span,
-.book_3 span {
-    margin-bottom: 8px;
-    font-size: 12px;
-    margin-bottom: 8px;
 }
 
 h3,
@@ -109,6 +95,8 @@ h3,
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-size: 12px;
+    margin: 0;
 }
 
 .book img,
@@ -136,19 +124,6 @@ h3 {
 span {
     font-size: 10px;
     font-weight: 700;
-}
-
-.add-to-cart {
-    cursor: pointer;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: gray;
-    background-color: white;
-}
-
-.add-to-cart:hover {
-    color: #FFA500;
 }
 
 /* Banner-area */
@@ -203,7 +178,6 @@ span {
 #map iframe {
     width: 100%;
     height: 350px;
-    /* Desktop */
     border: 0;
 }
 
@@ -270,6 +244,10 @@ span {
         margin: auto;
         margin-top: 40px;
         padding: 0 16px;
+    }
+
+    .filter {
+        gap: 25px !important;
     }
 
     .store-content {
@@ -351,6 +329,10 @@ span {
         margin-bottom: 10px;
     }
 
+    .modal-content2 {
+        width: 80%;
+    }
+
     .container {
         padding: 0 16px;
     }
@@ -383,6 +365,16 @@ span {
         max-width: 400px;
         margin: auto;
         margin-top: 40px;
+    }
+
+    .filter {
+        display: grid !important;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, auto);
+        gap: 15px !important;
+        align-items: stretch;
+        justify-content: center;
+        align-items: center;
     }
 
     .contact {
@@ -462,8 +454,21 @@ span {
     }
 
     #modalImg2 {
-        width: 260px;
-        height: 180px;
+        width: 300px !important;
+        height: 180px !important;
+    }
+
+    .modal-content3 {
+        width: 400px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center !important;
+        gap: 40px;
+    }
+
+    #modalTitle2 {
+        margin-bottom: 12px;
     }
 
     .modal img {
@@ -479,6 +484,20 @@ span {
         margin: auto;
         margin-top: 40px;
         padding: 0 16px;
+    }
+
+    .modal-content2 {
+        width: 90%;
+    }
+
+    .filter {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 10px !important;
+        align-items: stretch;
+        justify-content: center;
+        align-items: center;
     }
 
     .home-content {
