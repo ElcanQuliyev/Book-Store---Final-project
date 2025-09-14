@@ -1,0 +1,122 @@
+[
+    {
+        "title": "Hərb və sülh",
+        "author": "Lev Tolstoy",
+        "price": 10.0,
+        "image": "./images/HERB_VE_SULH_qapaq.webp",
+        "category": "Tarixi",
+        "description": "Lev Tolstoyun klassik əsəri hərb, sevgi və insan talelərini əhatə edən geniş tarixi romanıdır."
+    },
+    {
+        "title": "Pazarlama Savaşı",
+        "author": "Al Ries",
+        "price": 26,
+        "image": "./images/0002145377001-1.webp",
+        "category": "İnkişaf",
+        "description": "Al Riesin əsəri marketinq strategiyaları və brend qurma prinsiplərini oxucuya təqdim edir."
+    },
+    {
+        "title": "İtirilmiş Zaman",
+        "author": "Xanım Mehdixanlı",
+        "price": 12.0,
+        "image": "./images/ITIRILMISH_ZAMAN.webp",
+        "category": "Fantastika",
+        "description": "Xanım Mehdixanlının romanı zamanın sirrləri və insan taleləri üzərində qurulmuş fantastik hekayədir."
+    },
+    {
+        "title": "Spooky Stories",
+        "author": "Sam Baer",
+        "price": 33,
+        "image": "./images/81EWpBgkNwL._SL1500_.webp",
+        "category": "Dram",
+        "description": "Sam Baerin kitabında qorxu və gərgin hadisələr oxucunu hekayənin içində saxlayır."
+    },
+    {
+        "title": "İmam Əli",
+        "author": "George Jordac",
+        "price": 11.0,
+        "image": "./images/2b5bc5f93dd294189d2490e909beadc0.webp",
+        "category": "Tarixi",
+        "description": "George Jordacın əsəri İmam Əlinin həyatı və fəlsəfi baxışlarını ətraflı şəkildə təqdim edir."
+    },
+    {
+        "title": "The Wind in the Willows",
+        "author": "Mary Sebag-Montefiore",
+        "price": 13.0,
+        "image": "./images/9781805312130_cover_image_1688170275.webp",
+        "category": "Uşaq",
+        "description": "Mary Sebag-Montefiore uşaqlar üçün yazdığı hekayədə dostluq və təbiət mövzularını əks etdirir."
+    },
+    {
+        "title": "Journey to Fantome Island - The Wanderdays",
+        "author": "Clare Povey",
+        "price": 14.0,
+        "image": "./images/81j9ccN65qL._SL1500_.webp",
+        "category": "Fantastika",
+        "description": "Clare Povey fantastik ada və sirli səyahətləri əhatə edən maraqlı hekayələr təqdim edir."
+    },
+    {
+        "title": "Bilinç Dışı",
+        "author": "Sigmund Freud",
+        "price": 12.5,
+        "image": "./images/0001840528001-1.webp",
+        "category": "Psixoloji",
+        "description": "Sigmund Freudin əsəri insan şüuraltı və psixoloji mexanizmləri izah edir."
+    },
+    {
+        "title": "Amatör Psikanalizi",
+        "author": "Aysel Quliyeva",
+        "price": 9.0,
+        "image": "./images/0000000652183-1.webp",
+        "category": "Psixoloji",
+        "description": "Aysel Quliyeva oxucuya sadə dildə psixoloji analiz və insan davranışını öyrətməyi hədəfləyir."
+    },
+    {
+        "title": "İnsanları Kitap Gibi Okuyun",
+        "author": "Patrick King",
+        "price": 19,
+        "image": "./images/51SjQSoAtXL._SL1000_.webp",
+        "category": "İnkişaf",
+        "description": "Patrick King insanların davranışlarını və duyğularını oxumağa dair praktik tövsiyələr verir."
+    },
+    {
+        "title": "Cəsur oğlanların kitabı",
+        "author": "",
+        "price": 15.0,
+        "image": "./images/2024-10-12-14-49-211728730161.webp",
+        "category": "Uşaq",
+        "description": "Cəsur oğlanların hekayəsi uşaqlara cəsarət, dostluq və macəra mövzularını öyrədir."
+    },
+    {
+        "title": "Səslərin Yaddaşı",
+        "author": "Murad Hüseynov",
+        "price": 10.5,
+        "image": "./images/http___kitabal.az_img_books_2413900.webp",
+        "category": "Dram",
+        "description": "Murad Hüseynovun əsəri yaddaş, keçmiş və insan hisslərini dramatik şəkildə əks etdirir."
+    },
+    {
+        "title": "Ronaldo - Benim Futbol Kahramanım",
+        "author": "Rob Green",
+        "price": 11.5,
+        "image": "./images/0002085031001-1.webp",
+        "category": "İdman",
+        "description": "Rob Green Ronaldo və onun futboldakı uğurlarını uşaqlara və gənclərə ilham verəcək şəkildə təqdim edir."
+    },
+    {
+        "title": "Vida rəngləri",
+        "author": "Bernard Şlink",
+        "price": 8.0,
+        "image": "./images/VIDA_RENGLERI_qapaq_.webp",
+        "category": "Dram",
+        "description": "Bernard Şlinkin əsəri insan münasibətləri və həyat seçimlərini dərin psixoloji baxışla təsvir edir."
+    },
+    {
+        "title": "Havel. Bir həyatın hekayəti",
+        "author": "Maykl Zantovski",
+        "price": 13.5,
+        "image": "./images/HAVEL_qapaq.webp",
+        "category": "Tarixi",
+        "description": "Maykl Zantovski Havelin həyatı və mübarizəsini oxucuya ətraflı şəkildə təqdim edir."
+    }
+]

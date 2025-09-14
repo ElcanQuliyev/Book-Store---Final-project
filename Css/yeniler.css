@@ -3,17 +3,22 @@
 /* slider */
 .container,
 .container_2,
-.container_3 {
+.container_3,
+.container_4 {
     max-width: 1100px;
     margin: auto;
 }
 
-#prev {
-    display: none;
-}
-
-#next {
-    display: none;
+#books-container_4 {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+    align-items: stretch;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #books-container,
@@ -37,7 +42,8 @@ h2 {
 
 .book,
 .book_2,
-.book_3 {
+.book_3,
+.book_4 {
     display: flex;
     flex-direction: column;
     width: 250px;
@@ -49,7 +55,8 @@ h2 {
 
 .book h3,
 .book_2 h3,
-.book_3 h3 {
+.book_3 h3,
+.book_4 h3 {
     font-size: 15px;
     margin: 0;
     overflow: hidden;
@@ -57,24 +64,22 @@ h2 {
 
 .book span,
 .book_2 span,
-.book_3 span {
+.book_3 span .book_4 span {
     font-weight: 600;
 }
 
 .book p,
 .book_2 p,
-.book_3 p {
+.book_3 p,
+.book_4 p {
     overflow: hidden;
     font-size: 14px;
 }
 
-.book button {
-    margin-top: auto;
-}
-
 .book img,
 .book_2 img,
-.book_3 img {
+.book_3 img,
+.book_4 img {
     display: block;
     margin: auto;
     width: 100%;
@@ -85,7 +90,8 @@ h2 {
 
 .book img:hover,
 .book_2 img:hover,
-.book_3 img:hover {
+.book_3 img:hover,
+.book_4 img:hover {
     transform: scale(1.03);
     transition: transform 0.5s;
 }
@@ -201,7 +207,8 @@ footer {
 
     #books-container,
     #books-container_2,
-    #books-container_3 {
+    #books-container_3,
+    #books-container_4 {
         margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -215,7 +222,8 @@ footer {
 
     .book,
     .book_2,
-    .book_3 {
+    .book_3,
+    .book_4 {
         display: flex;
         flex-direction: column;
         width: 300px;
@@ -227,7 +235,8 @@ footer {
 
     .container,
     .container_2,
-    .container_3 {
+    .container_3,
+    .container_4 {
         padding: 0 16px;
     }
 
@@ -276,7 +285,8 @@ footer {
 
     .container,
     .container_2,
-    .container_3 {
+    .container_3,
+    .container_4 {
         padding: 0 16px;
     }
 
@@ -287,7 +297,8 @@ footer {
 
     #books-container,
     #books-container_2,
-    #books-container_3 {
+    #books-container_3,
+    #books-container_4 {
         margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -301,7 +312,8 @@ footer {
 
     .book img,
     .book_2 img,
-    .book_3 img {
+    .book_3 img,
+    .book_4 img {
         width: 100%;
         max-width: 170px;
         height: 230px;
@@ -392,7 +404,8 @@ footer {
 
     #books-container,
     #books-container_2,
-    #books-container_3 {
+    #books-container_3,
+    #books-container_4 {
         margin-top: 40px;
         display: flex;
         flex-direction: column;
@@ -403,7 +416,8 @@ footer {
 
     .book img,
     .book_2 img,
-    .book_3 img {
+    .book_3 img,
+    .book_4 img {
         width: 100%;
         max-width: 170px;
         height: 230px;

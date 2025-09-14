@@ -43,7 +43,7 @@ img {
     padding-bottom: 0px;
 }
 
-h5{
+h5 {
     color: red;
     margin-bottom: 0;
     font-size: 18px;
@@ -200,7 +200,8 @@ h5{
         display: block !important;
     }
 
-    nav a , .user-area{
+    nav a,
+    .user-area {
         display: none !important;
     }
 
@@ -302,13 +303,18 @@ h5{
         gap: 10px;
     }
 
-    .modal-content3 {
-        width: 95%;
+    #modalImg2 {
+        width: 300px !important;
+        height: 180px !important;
     }
 
-    .modal-content3 img {
-        width: 230px;
-        height: auto;
+    .modal-content3 {
+        width: 400px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center !important;
+        gap: 40px;
     }
 
     .contact a {

@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 selectedCategories.length === 0 || selectedCategories.includes(productCategory);
 
             if (matchesSearch && matchesCategory) {
-                product.style.display = "block";
+                product.style.display = "flex"; 
                 found2++;
             } else {
                 product.style.display = "none";

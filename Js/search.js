@@ -6,11 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevButton = document.getElementById("prev");
     const nextButton = document.getElementById("next");
 
-    // Buttonları tamamilə gizlə
     if (prevButton) prevButton.style.display = "none";
     if (nextButton) nextButton.style.display = "none";
 
-    // NotFound mesajını yalnız bir dəfə yarat
     let notFoundMessage = productContainer.parentElement.querySelector(".not-found");
     if (!notFoundMessage) {
         notFoundMessage = document.createElement("div");
@@ -42,18 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 selectedCategories.length === 0 || selectedCategories.includes(productCategory);
 
             if (matchesSearch && matchesCategory) {
-                product.style.display = "block";
+                product.style.display = "flex"; 
                 found++;
             } else {
                 product.style.display = "none";
             }
         });
 
-        // Yalnız notFound mesajını göstər, buttonlara toxunma
         notFoundMessage.style.display = found === 0 ? "block" : "none";
     }
 
-    // Event-lər
     searchInput?.addEventListener("input", filterBooks);
     checkboxes.forEach(ch => ch.addEventListener("change", filterBooks));
 });
